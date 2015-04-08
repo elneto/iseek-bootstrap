@@ -1,0 +1,145 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'simplehttpserver',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose cache add [ 'simplehttpserver', null ]
+5 verbose cache add name=undefined spec="simplehttpserver" args=["simplehttpserver",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'simplehttpserver',
+6 verbose parsed url   path: 'simplehttpserver',
+6 verbose parsed url   href: 'simplehttpserver' }
+7 silly lockFile 89915de1-simplehttpserver simplehttpserver
+8 verbose lock simplehttpserver /Users/Ernesto/.npm/89915de1-simplehttpserver.lock
+9 silly lockFile 89915de1-simplehttpserver simplehttpserver
+10 silly lockFile 89915de1-simplehttpserver simplehttpserver
+11 verbose addNamed [ 'simplehttpserver', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile aa16074f-simplehttpserver simplehttpserver@
+14 verbose lock simplehttpserver@ /Users/Ernesto/.npm/aa16074f-simplehttpserver.lock
+15 silly addNameRange { name: 'simplehttpserver', range: '*', hasData: false }
+16 verbose request where is /simplehttpserver
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 3f21a90d88523e6d
+19 verbose url raw /simplehttpserver
+20 verbose url resolving [ 'https://registry.npmjs.org/', './simplehttpserver' ]
+21 verbose url resolved https://registry.npmjs.org/simplehttpserver
+22 verbose request where is https://registry.npmjs.org/simplehttpserver
+23 info trying registry request attempt 1 at 17:50:18
+24 http GET https://registry.npmjs.org/simplehttpserver
+25 http 200 https://registry.npmjs.org/simplehttpserver
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Wed, 08 Apr 2015 21:49:12 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"A8OVFIA9D29ILH1BS8RG03N2N"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '3639',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-iad2133-IAD',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1428529752.541184,VS0,VE91',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'simplehttpserver', range: '*', hasData: true }
+28 silly addNameRange versions [ 'simplehttpserver', [ '0.0.1', '0.0.2', '0.0.3' ] ]
+29 verbose addNamed [ 'simplehttpserver', '0.0.3' ]
+30 verbose addNamed [ '0.0.3', '0.0.3' ]
+31 silly lockFile 11bb0455-simplehttpserver-0-0-3 simplehttpserver@0.0.3
+32 verbose lock simplehttpserver@0.0.3 /Users/Ernesto/.npm/11bb0455-simplehttpserver-0-0-3.lock
+33 silly lockFile 18b8024c-erver-simplehttpserver-0-0-3-tgz https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz
+34 verbose lock https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz /Users/Ernesto/.npm/18b8024c-erver-simplehttpserver-0-0-3-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz',
+35 verbose addRemoteTarball   '470ff5030cc47979ad376bc590706e0743139d5c' ]
+36 info retry fetch attempt 1 at 17:50:19
+37 verbose fetch to= /var/folders/cr/9rnn579s7mg5p8zs66539t580000gp/T/npm-55446-HU5jfdWR/registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz
+38 http GET https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz
+39 http 200 https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz
+40 silly lockFile 18b8024c-erver-simplehttpserver-0-0-3-tgz https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz
+41 silly lockFile 18b8024c-erver-simplehttpserver-0-0-3-tgz https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz
+42 silly lockFile 11bb0455-simplehttpserver-0-0-3 simplehttpserver@0.0.3
+43 silly lockFile 11bb0455-simplehttpserver-0-0-3 simplehttpserver@0.0.3
+44 silly lockFile aa16074f-simplehttpserver simplehttpserver@
+45 silly lockFile aa16074f-simplehttpserver simplehttpserver@
+46 silly resolved [ { name: 'simplehttpserver',
+46 silly resolved     description: 'Simple HTTP Server for static files',
+46 silly resolved     author: { name: 'Teemu Ikonen', email: 'teemu.ikonen@ıki.fi' },
+46 silly resolved     version: '0.0.3',
+46 silly resolved     bin: { simplehttpserver: './cli.js' },
+46 silly resolved     engine: 'node >= 0.10.0',
+46 silly resolved     dependencies:
+46 silly resolved      { send: '>=0.1.0',
+46 silly resolved        express: '>=3.0.0',
+46 silly resolved        async: '>= 0.2.6',
+46 silly resolved        'body-parser': '>= 1.9.2',
+46 silly resolved        morgan: '>= 1.4.1' },
+46 silly resolved     license: 'MIT',
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'https://github.com/tikonen/blog/tree/master/simplehttpserver' },
+46 silly resolved     _id: 'simplehttpserver@0.0.3',
+46 silly resolved     scripts: {},
+46 silly resolved     _shasum: '470ff5030cc47979ad376bc590706e0743139d5c',
+46 silly resolved     _from: 'simplehttpserver@',
+46 silly resolved     _npmVersion: '2.1.4',
+46 silly resolved     _nodeVersion: '0.10.32',
+46 silly resolved     _npmUser: { name: 'tikonen', email: 'teemu.ikonen@iki.fi' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     dist:
+46 silly resolved      { shasum: '470ff5030cc47979ad376bc590706e0743139d5c',
+46 silly resolved        tarball: 'http://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz' },
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/simplehttpserver/-/simplehttpserver-0.0.3.tgz' } ]
+47 info install simplehttpserver@0.0.3 into /usr/local/lib
+48 info installOne simplehttpserver@0.0.3
+49 verbose lib/node_modules/simplehttpserver unbuild
+50 verbose tar unpack /Users/Ernesto/.npm/simplehttpserver/0.0.3/package.tgz
+51 silly lockFile 7c8f01c1-ib-node-modules-simplehttpserver tar:///usr/local/lib/node_modules/simplehttpserver
+52 verbose lock tar:///usr/local/lib/node_modules/simplehttpserver /Users/Ernesto/.npm/7c8f01c1-ib-node-modules-simplehttpserver.lock
+53 silly lockFile 5d5519dd-mplehttpserver-0-0-3-package-tgz tar:///Users/Ernesto/.npm/simplehttpserver/0.0.3/package.tgz
+54 verbose lock tar:///Users/Ernesto/.npm/simplehttpserver/0.0.3/package.tgz /Users/Ernesto/.npm/5d5519dd-mplehttpserver-0-0-3-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/simplehttpserver'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/simplehttpserver']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/simplehttpserver',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/simplehttpserver',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:107:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 13.4.0
+59 error command "node" "/usr/local/bin/npm" "install" "simplehttpserver" "-g"
+60 error cwd /Users/Ernesto/Projects/iseek/iseek-bootstrap
+61 error node -v v0.10.33
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/simplehttpserver
+64 error fstream_path /usr/local/lib/node_modules/simplehttpserver
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/simplehttpserver'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:107:15)
+71 verbose exit [ 3, true ]
