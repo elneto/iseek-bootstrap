@@ -32,6 +32,14 @@
 @footer-dark-blue: #0d3257;
 @footer-border: #668595;
 
+///////////////////////////////////////////////////////////////////////////
+
+/*
+*  Fonts
+*/
+
+
+
 /////////
 
 /*
@@ -109,16 +117,64 @@
   .border-radius();
   color: #FFF;
 }
+/*
+* side box top light blue section
+*/
 .top-side-box{
    .border-radiuses(5px,0,0,5px);
    background-color: @side-box-blue;
    color:#FFF;
+   padding:0.5em .5em .5em 0.5em;
+   margin-bottom: 0;
 }
 .bottom-side-box{
    .border-radiuses(0,5px,5px,0);
    background-color: @bottom-grey;
    color:@news-blue;
+   margin-top: 0;
 }
+.staff-box{
+  .border-radiuses(5px,5px,5px,5px);
+  background-color:@notification-background-blue;
+  padding:.6em;
+}
+.tjo{
+  .border-radiuses(5px,0,0,5px);
+  background-color:@tjo-green;
+  margin:0;
+}
+.tjo-content{
+  background-color:#FFF;
+  border-left: 4px  solid @tjo-green;
+}
+.classifieds{
+  .border-radiuses(5px,0,0,5px);
+  background-color:@classifieds-brown;
+  margin:0;
+}
+.classifieds-content{
+  background-color:#FFF;
+  border-left: 4px  solid @classifieds-brown; 
+}
+.staffunion{
+  .border-radiuses(5px,0,0,5px);
+  background-color:@staff-union-green;
+  margin:0;
+}
+.staffunion-content{
+  background-color:#FFF;
+  border-left: 4px  solid @staff-union-green;
+}
+.community{
+  .border-radiuses(5px,0,0,5px);
+  background-color:@community-grey;
+  margin:0;
+}
+.community-content{
+  background-color:#FFF;
+  border-left: 4px  solid @community-grey;
+}
+
 /*
  * Footer
  */
