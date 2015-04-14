@@ -1,7 +1,8 @@
+///////////////////////////////////////////////////////////////////////////
 /*
  * Variables
  */
-
+// Colors
 @brand-bar-blue: #007db4;
 @brand-font-color: white;
 /////////
@@ -31,17 +32,11 @@
 @community-grey: #e3e3d9;
 @footer-dark-blue: #0d3257;
 @footer-border: #668595;
-
+// constants
+@padding: 0.5em 0.5em 0.5em 0.5em;
+@large-text:24px;
+@medium-text:16px;
 ///////////////////////////////////////////////////////////////////////////
-
-/*
-*  Fonts
-*/
-
-
-
-/////////
-
 /*
 * Fonts
 */
@@ -136,6 +131,13 @@ body {
   background-color: @add-content-blue;
   .border-radius();
   color: #FFF;
+  padding:@padding;
+}
+.timezone{
+  background-color:@side-box-blue;
+  .border-radius();
+  color: #FFF;
+  padding:@padding;
 }
 /*
 * side box top light blue section
@@ -144,7 +146,7 @@ body {
    .border-radiuses(5px,0,0,5px);
    background-color: @side-box-blue;
    color:#FFF;
-   padding:0.5em .5em .5em 0.5em;
+   padding:@padding;
    margin-bottom: 0;
 }
 .bottom-side-box{
@@ -194,7 +196,33 @@ body {
   background-color:#FFF;
   border-left: 4px  solid @community-grey;
 }
+.large-text{
+  font-size: @large-text;
+}
+.medium-text{
+  font-size: @medium-text;
+}
+.go{
+  background-color: @button-blue;
+  padding:0;
+  .border-radiuses(0,0,0,0);
+}
+.toolkit{
+  .border-radiuses(5px,0,0,5px);
+  background-color:@footer-dark-blue;
+  color:#FFF;
+  padding:@padding;
+}
+.dutystaion{
+  border-right: 1px solid #CCC;
 
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+.underline
+.temperature{
+  text-align: right;
+}
 /*
  * Footer
  */
@@ -230,7 +258,3 @@ body {
   background-color: #007db4;
   color:white;
 }
-
-/*
- * From here down is for Husain and up for E.
- */
