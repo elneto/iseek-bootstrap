@@ -35,14 +35,6 @@
 ///////////////////////////////////////////////////////////////////////////
 
 /*
-*  Fonts
-*/
-
-
-
-/////////
-
-/*
 * Fonts
 */
 
@@ -52,6 +44,14 @@
   src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/SourceSansPro-Regular.otf.woff') format('woff'), /* Pretty Modern Browsers */
        url('../fonts/SourceSansPro-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url('../fonts/SourceSansPro-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/SourceSansPro-Light.otf.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SourceSansPro-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 /*
@@ -103,13 +103,24 @@
 }
 
 /*
+* Body
+*/
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+/*
  * Masthead for nav
  */
 
 #top-bar {
+  font-family: 'Source Sans Pro Light', Helvetica, sans-serif;
   background-color: @brand-bar-blue;
   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  height: 40px;
 }
 
 .top-nav-item {
@@ -118,15 +129,10 @@
   padding: 10px;
   font-weight: 500;
   color: @brand-font-color;
+  font-size: 1.3em;
 }
 
-/*
-* Body
-*/
 
-body {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
-}
 
 /*
 * Submit Content
