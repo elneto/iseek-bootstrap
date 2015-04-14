@@ -3,7 +3,7 @@
  */
 
 @brand-bar-blue: #007db4;
-@brand-font-color: #c3e6f7;
+@brand-font-color: white;
 /////////
 @button-blue: #5aabd7;
 @side-box-blue: #5aabd7; // (sideboxes, buttons, time and weather)
@@ -41,6 +41,18 @@
 
 
 /////////
+
+/*
+* Fonts
+*/
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/SourceSansPro-Regular.otf.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SourceSansPro-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 /*
 * Rules
@@ -106,6 +118,14 @@
   padding: 10px;
   font-weight: 500;
   color: @brand-font-color;
+}
+
+/*
+* Body
+*/
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 /*
