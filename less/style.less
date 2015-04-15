@@ -52,6 +52,14 @@
 }
 
 @font-face {
+  font-family: 'Source Sans Black';
+  src: url('../fonts/SourceSansPro-Black.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/SourceSansPro-Black.otf.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SourceSansPro-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
   font-family: 'Source Sans Pro Light';
   src: url('../fonts/SourceSansPro-Light.eot'); /* IE9 Compat Modes */
   src: url('../fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -230,12 +238,19 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
 * side box top light blue section
 */
 .top-side-box{
-   .border-radiuses(5px,0,0,5px);
+   .border-radiuses(15px,0,0,15px);
    background-color: @side-box-blue;
    color:#FFF;
    padding:@padding;
    margin-bottom: 0;
+   font-family: 'Source Sans Pro Light', Helvetica, sans-serif;
+   font-size: 1.9em;
 }
+
+.top-side-box:hover{
+  background-color: @banner-blue;
+}
+
 .bottom-side-box{
    .border-radiuses(0,5px,5px,0);
    background-color: @bottom-grey;
