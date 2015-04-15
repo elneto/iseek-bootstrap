@@ -52,6 +52,14 @@
 }
 
 @font-face {
+  font-family: 'Source Sans Black';
+  src: url('../fonts/SourceSansPro-Black.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/SourceSansPro-Black.otf.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SourceSansPro-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
   font-family: 'Source Sans Pro Light';
   src: url('../fonts/SourceSansPro-Light.eot'); /* IE9 Compat Modes */
   src: url('../fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -59,11 +67,19 @@
        url('../fonts/SourceSansPro-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'Source Sans Pro Semibold';
+  src: url('../fonts/SourceSansPro-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SourceSansPro-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/SourceSansPro-Semibold.otf.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SourceSansPro-Semibold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 /*
 * Rules
 */
 
-.border-radius (@radius: 5px;) {
+.border-radius (@radius: 10px;) {
   -webkit-border-radius: @radius;
   -moz-border-radius:    @radius;
   border-radius:         @radius;
@@ -181,6 +197,28 @@ img#iseek-logo-banner {
 }
 
 /*
+* Main nav menu
+*/
+
+div#main-navbar-collapse-1 {
+  background-color: white;
+  font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
+}
+
+div#main-navbar-collapse-1 li a {
+  font-size: 1.8em;
+  color: @banner-blue;
+}
+
+div#main-navbar-collapse-1 i.fa {
+  padding-right: 0.2em;
+}
+
+div#main-navbar-collapse-1 ul.dropdown-menu li a{
+  font-size: 1em;
+}
+
+/*
 * Submit Content
 */
 
@@ -200,12 +238,23 @@ img#iseek-logo-banner {
 * side box top light blue section
 */
 .top-side-box{
+<<<<<<< HEAD
    .border-radiuses(10px,0,0,10px);
+=======
+   .border-radiuses(15px,0,0,15px);
+>>>>>>> ff8ed9db9e63635d096288747c2e3c14fa02a053
    background-color: @side-box-blue;
    color:#FFF;
    padding:@padding;
    margin-bottom: 0;
+   font-family: 'Source Sans Pro Light', Helvetica, sans-serif;
+   font-size: 1.9em;
 }
+
+.top-side-box:hover{
+  background-color: @banner-blue;
+}
+
 .bottom-side-box{
    .border-radiuses(0,10px,10px,0);
    background-color: @bottom-grey;
