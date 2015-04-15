@@ -34,8 +34,9 @@
 @footer-border: #668595;
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
-@large-text:24px;
-@medium-text:16px;
+@large-text:2em;
+@medium-text:1.5em;
+
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -242,17 +243,41 @@ img#un-top-logo {
   background-color:@footer-dark-blue;
   color:#FFF;
   padding:@padding;
+  margin: 2em 0 0 0;
 }
 .dutystaion{
-  border-right: 1px solid #CCC;
-
+  //border-right: 1px dashed #CCC;
+  text-align: left;
   margin-top: .2em;
   margin-bottom: .2em;
+  margin-right: 0;
+  margin-left: 0;
+
 }
-.underline
+.underline{
+ // border-bottom: 1px dashed #CCC;
+}
 .temperature{
   text-align: right;
 }
+.weather-icon{
+  text-align: left;
+  padding-top:0.6em;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.moon{
+  color:grey;
+}
+.sun {
+  color:orange;
+}
+.rain {
+  color:@button-blue;
+}
+
 /*
  * Footer
  */
