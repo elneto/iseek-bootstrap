@@ -186,13 +186,13 @@ img#iseek-logo-banner {
 
 .submit{
   background-color: @add-content-blue;
-  .border-radius();
+  .border-radius(10px);
   color: #FFF;
   padding:@padding;
 }
 .timezone{
   background-color:@side-box-blue;
-  .border-radius();
+  .border-radius(10px);
   color: #FFF;
   padding:@padding;
 }
@@ -200,25 +200,25 @@ img#iseek-logo-banner {
 * side box top light blue section
 */
 .top-side-box{
-   .border-radiuses(5px,0,0,5px);
+   .border-radiuses(10px,0,0,10px);
    background-color: @side-box-blue;
    color:#FFF;
    padding:@padding;
    margin-bottom: 0;
 }
 .bottom-side-box{
-   .border-radiuses(0,5px,5px,0);
+   .border-radiuses(0,10px,10px,0);
    background-color: @bottom-grey;
    color:@news-blue;
    margin-top: 0;
 }
 .staff-box{
-  .border-radiuses(5px,5px,5px,5px);
+  .border-radiuses(10px,10px,10px,10px);
   background-color:@notification-background-blue;
   padding:.6em;
 }
 .tjo{
-  .border-radiuses(5px,0,0,5px);
+  .border-radiuses(10px,0,0,10px);
   background-color:@tjo-green;
   margin:0;
 }
@@ -227,7 +227,7 @@ img#iseek-logo-banner {
   border-left: 4px  solid @tjo-green;
 }
 .classifieds{
-  .border-radiuses(5px,0,0,5px);
+  .border-radiuses(10px,0,0,10px);
   background-color:@classifieds-brown;
   margin:0;
 }
@@ -236,7 +236,7 @@ img#iseek-logo-banner {
   border-left: 4px  solid @classifieds-brown; 
 }
 .staffunion{
-  .border-radiuses(5px,0,0,5px);
+  .border-radiuses(10px,0,0,10px);
   background-color:@staff-union-green;
   margin:0;
 }
@@ -245,7 +245,7 @@ img#iseek-logo-banner {
   border-left: 4px  solid @staff-union-green;
 }
 .community{
-  .border-radiuses(5px,0,0,5px);
+  .border-radiuses(10px,0,0,10px);
   background-color:@community-grey;
   margin:0;
 }
@@ -265,7 +265,7 @@ img#iseek-logo-banner {
   .border-radiuses(0,0,0,0);
 }
 .toolkit{
-  .border-radiuses(5px,0,0,5px);
+  .border-radiuses(10px,0,0,10px);
   background-color:@footer-dark-blue;
   color:#FFF;
   padding:@padding;
@@ -273,16 +273,23 @@ img#iseek-logo-banner {
   border-bottom: 1px white solid;
 }
 .dutystaion{
-  //border-right: 1px dashed #CCC;
+  border-right: 1px solid #CCC;
+  text-align: left;
+  margin-top: .2em;
+  margin-bottom: .2em;
+  margin-right: 0em;
+  margin-left: 0em;
+}
+.dutystaion-last{
   text-align: left;
   margin-top: .2em;
   margin-bottom: .2em;
   margin-right: 0;
   margin-left: 0;
-
 }
+
 .underline{
-  border-bottom: 1px white solid;
+  border-bottom: 1px #CCC solid;
 }
 .temperature{
   text-align: right;
@@ -305,7 +312,7 @@ img#iseek-logo-banner {
   color:@button-blue;
 }
 .left-menu{
-  .border-radiuses(0,5px,5px,0);
+  .border-radiuses(0,10px,10px,0);
    background-color:@footer-dark-blue;
   
 }
@@ -313,13 +320,16 @@ img#iseek-logo-banner {
   color:#FFF;
 }
 .about-us{
-  background-color: @side-box-blue;
+  
   color:#FFF;
   padding:@padding;
   margin: 0;
-  .border-radiuses(0,5px,5px,0);
   width: 100%;
 }
+.footer-background{
+  background-color: @side-box-blue;
+}
+
 /*
  * Footer
  */
@@ -334,7 +344,6 @@ img#iseek-logo-banner {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
-
 /*
  * Gray blocks for scaffolding
  */
