@@ -269,6 +269,7 @@ div#caption-mi-snippet {
   .border-radius(10px);
   color: #FFF;
   padding:@padding;
+  margin-top: 2em;
 }
 /*
 * side box top light blue section
@@ -278,11 +279,21 @@ div#caption-mi-snippet {
    background-color: @side-box-blue;
    color:#FFF;
    padding:@padding;
+   margin-top:2em;
    margin-bottom: 0;
    .font('Light');
-   font-size: 1.9em;
+   font-size: @large-text;
 }
-
+.un-news{
+  padding:1em;
+  margin:0;
+  border-left: 2px  solid @bottom-grey; 
+  border-right: 2px  solid @bottom-grey; 
+}
+.un-news li{
+  list-style-type: none;
+  .underline;
+}
 .top-side-box:hover{
   background-color: @banner-blue;
 }
@@ -296,43 +307,91 @@ div#caption-mi-snippet {
 .staff-box{
   .border-radiuses(10px,10px,10px,10px);
   background-color:@notification-background-blue;
-  padding:.6em;
+  padding:@padding;
 }
 .tjo{
   .border-radiuses(10px,0,0,10px);
   background-color:@tjo-green;
   margin:0;
+  padding: @padding;
 }
 .tjo-content{
   background-color:#FFF;
   border-left: 4px  solid @tjo-green;
+  padding: @padding;
+}
+.tjo-content ul{
+  padding:0;
+  margin:0;
+}
+.tjo-content ul li {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  .underline;
 }
 .classifieds{
   .border-radiuses(10px,0,0,10px);
   background-color:@classifieds-brown;
   margin:0;
+  padding: @padding;
 }
 .classifieds-content{
   background-color:#FFF;
   border-left: 4px  solid @classifieds-brown; 
+  padding: @padding;
+}
+.classifieds-content ul{
+  padding:0;
+  margin:0;
+}
+.classifieds-content ul li {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  .underline;
 }
 .staffunion{
   .border-radiuses(10px,0,0,10px);
   background-color:@staff-union-green;
-  margin:0;
+  margin:0.6em 0 0 0;
+  padding: @padding;
 }
 .staffunion-content{
   background-color:#FFF;
   border-left: 4px  solid @staff-union-green;
+  padding: @padding;
+}
+.staffunion-content ul{
+  padding:0;
+  margin:0;
+}
+.staffunion-content ul li {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  .underline;
 }
 .community{
   .border-radiuses(10px,0,0,10px);
   background-color:@community-grey;
-  margin:0;
+  margin:0.6em 0 0 0;
+  padding: @padding;
 }
 .community-content{
   background-color:#FFF;
   border-left: 4px  solid @community-grey;
+  padding: @padding;
+}
+.community-content ul{
+  padding:0;
+  margin:0;
+}
+.community-content ul li {
+  list-style-type: none;
+  padding:@padding;
+  margin:0;
+  
 }
 .large-text{
   font-size: @large-text;
@@ -356,13 +415,17 @@ div#caption-mi-snippet {
   margin: 2em 0 0 0;
   border-bottom: 1px white solid;
 }
+.dutystaion-container{
+  padding: 0;
+  margin: 0;
+}
 .dutystaion{
   border-right: 1px solid #CCC;
   text-align: left;
   margin-top: .2em;
   margin-bottom: .2em;
-  margin-right: 0em;
-  margin-left: 0em;
+  margin-right: 0;
+  margin-left: 0;
 }
 .dutystaion-last{
   text-align: left;
@@ -371,9 +434,18 @@ div#caption-mi-snippet {
   margin-right: 0;
   margin-left: 0;
 }
-
+.duty-padding{
+  padding-left:0.5em;
+  padding-right:0.5em;
+}
 .underline{
   border-bottom: 1px #CCC solid;
+}
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
 }
 .temperature{
   text-align: right;
@@ -387,13 +459,16 @@ div#caption-mi-snippet {
   margin: 0;
 }
 .moon{
-  color:grey;
+  color:@footer-dark-blue;
 }
 .sun {
   color:orange;
 }
 .rain {
   color:@button-blue;
+}
+.cloud{
+  color:@community-grey;
 }
 .left-menu{
   .border-radiuses(0,0px,10px,0);
@@ -455,12 +530,25 @@ div#caption-mi-snippet {
   //margin: 0;
   .border-radiuses(0,10px,10px,0);
 }
-.footer-menu-background{
+.footer-menu-container{
+  padding: 0;
+  margin: 0;
+}
+.footer-menu-items{
   background-color: @footer-highlighted-blue;
   // .border-radiuses(0,10px,0px,0);
   height: 100%;
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+  margin-left: 2em;
+  color:@footer-dark-blue;
 }
-
+.footer-menu-items  li{
+  list-style-type: none;
+  padding: @padding;
+  margin: 0;
+  text-align: left;
+}
 .logo-footer{
   padding: @padding;
   text-align: left;
