@@ -37,6 +37,7 @@
 @large-text:2em;
 @medium-text:1.4em;
 @small-text:1.2em;
+@divider:2em;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -298,13 +299,29 @@ div#thumbnail-most-popular{
   .border-radius(10px);
   color: #FFF;
   padding:@padding;
+  margin-top:@divider;
 }
 .timezone{
   background-color:@side-box-blue;
   .border-radius(10px);
   color: #FFF;
   padding:@padding;
-  margin-top: 2em;
+  margin-top: @divider;
+}
+.facebook{
+  color:#44619d;
+}
+.twitter{
+  color:#5ea9dd;
+}
+.googleplus{
+  color:#df4b38;
+}
+.youtube{
+  color:#dd2826;
+}
+.instagram{
+  color:#cccccc;
 }
 /*
 * side box top light blue section
@@ -314,7 +331,7 @@ div#thumbnail-most-popular{
    background-color: @side-box-blue;
    color:#FFF;
    padding:@padding;
-   margin-top:2em;
+   margin-top:@divider;
    margin-bottom: 0;
    .font('Light');
    font-size: @large-text;
@@ -341,19 +358,23 @@ div#thumbnail-most-popular{
 }
 .staff-box{
   .border-radiuses(10px,10px,10px,10px);
-  background-color:@notification-background-blue;
+  //background-color:@notification-background-blue;
   padding:@padding;
+  margin-top:@divider;
+ // border: 1px solid @notification-background-blue;
+
 }
 .tjo{
   .border-radiuses(10px,0,0,10px);
   background-color:@tjo-green;
   margin:0;
   padding: @padding;
+  display: flex; 
 }
 .tjo-content{
   background-color:#FFF;
   border-left: 4px  solid @tjo-green;
-  padding: @padding;
+
 }
 .tjo-content ul{
   padding:0;
@@ -370,11 +391,13 @@ div#thumbnail-most-popular{
   background-color:@classifieds-brown;
   margin:0;
   padding: @padding;
+  height: auto;
+  display: flex; 
 }
 .classifieds-content{
   background-color:#FFF;
   border-left: 4px  solid @classifieds-brown; 
-  padding: @padding;
+  height: 100%;
 }
 .classifieds-content ul{
   padding:0;
