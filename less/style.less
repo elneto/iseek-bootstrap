@@ -11,7 +11,7 @@
 /////////
 @news-blue: #1c90ce;
 @banner-blue: #1c90ce;
-@footer-highlighted-blue: #1c90ce;
+@footer-highlighted-blue: #b7e3fe;
 ///////
 @menu-blue:#0071b9;
 /////////
@@ -36,7 +36,7 @@
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
 @medium-text:1.5em;
-
+@small-text:1.2em;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -238,11 +238,7 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
 * side box top light blue section
 */
 .top-side-box{
-<<<<<<< HEAD
-   .border-radiuses(10px,0,0,10px);
-=======
    .border-radiuses(15px,0,0,15px);
->>>>>>> ff8ed9db9e63635d096288747c2e3c14fa02a053
    background-color: @side-box-blue;
    color:#FFF;
    padding:@padding;
@@ -308,6 +304,9 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
 .medium-text{
   font-size: @medium-text;
 }
+.small-text{
+  font-size: @small-text;
+}
 .go{
   background-color: @button-blue;
   padding:0;
@@ -361,15 +360,53 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
   color:@button-blue;
 }
 .left-menu{
-  .border-radiuses(0,10px,10px,0);
+  .border-radiuses(0,0px,10px,0);
    background-color:@footer-dark-blue;
-  
+   padding-bottom: 1000px;
+   margin-bottom: -1000px;
+   height: 100%;
+   border-right: 1px solid #FFF;
+}
+.toolkit-row{
+  overflow: hidden;
 }
 .partners{
   color:#FFF;
+  padding: 0;
+  text-align: left;
+}
+.partners li{
+  list-style-type: none;
+  padding: @padding;
+  margin: 0;
+  text-align: left;
+}
+.tabs-container{
+  padding:0;
+  margin: 0;
+}
+.tabs{
+  color:#FFF;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width:auto;
+}
+.tabs ul{
+  
+  padding:0;
+  margin: 0;
+}
+.tabs ul li{
+  list-style-type: none;
+  .border-radiuses(10px,10px,0,0);
+  padding:@padding;
+  margin: 0.5em 0 0.5em 0;
+  text-align: left; 
+  background-color: @footer-dark-blue;
+  
 }
 .about-us{
-  
   color:#FFF;
   padding:@padding;
   margin: 0;
@@ -377,8 +414,21 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
 }
 .footer-background{
   background-color: @side-box-blue;
+  //height: inherit;
+  //padding: @padding;
+  //margin: 0;
+  .border-radiuses(0,10px,10px,0);
+}
+.footer-menu-background{
+  background-color: @footer-highlighted-blue;
+  // .border-radiuses(0,10px,0px,0);
+  height: 100%;
 }
 
+.logo-footer{
+  padding: @padding;
+  text-align: left;
+}
 /*
  * Footer
  */
