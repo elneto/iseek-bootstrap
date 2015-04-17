@@ -129,26 +129,51 @@
       <!-- Stories, search, events, announcements -->
       <div class="row">
         <div class="col-md-5 col-md-push-7">
-          <h3 class="top-side-box"> <i class="fa fa-search"></i> Search</h3>
-          <form id="search-form">
-            <div class="row">
-              <div class="col-xs-10 rpad0">
-                <input type="text" name="find-colleague" placeholder="Find a colleague" class="search-input" id="input-find-colleague">
+            <h3 class="top-side-box"> <i class="fa fa-search"></i> Search</h3>
+            <div id="search-box">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="input-find-colleague">Find a colleague</label> <!--placeholder="Find a colleague"!--> 
+                </div>
+                <div class="col-xs-10 rpad0">
+                  <input type="text" name="find-colleague" class="search-input" id="input-find-colleague">
+                </div>
+                <div class="col-xs-2 lpad0">
+                  <button name="Search" class="search-button">Search</button>
+                </div>
               </div>
-              <div class="col-xs-2 lpad0">
-                <button name="Search" class="search-button">Search</button>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="input-search-iseek">Search the UN Intranet or ODS</label> <!-- placeholder="Search the UN Intranet or ODS"  !-->
+                </div>
+                <div class="col-xs-8 rpad0">
+                  <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
+                </div>
+                <div class="col-xs-2 lrpad0">
+                  <select id="select-search" class="search-input">
+                    <option>Intranet</option>
+                    <option>ODS</option>
+                  </select>
+                </div>
+                <div class="col-xs-2 lpad0">
+                  <button name="Search" class="search-button">Search</button>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-            <input type="text" name="search-intranet" placeholder="Search the UN Intranet or ODS" class="search-input" id="input-search-iseek"><button name="Search" class="search-button">Search</button>
+              <div class="row ">
+                <div class="col-md-12">
+                  <div id="search-links">
+                  <a href="#">Update my Information</a>  |
+                  <a href="#">Advanced Search</a>  |
+                  <a href="#">Additional Resources</a></div>
+                </div>
               </div>
-            </div>
-            
-          </form>
-          <h3 class="bb" >Upcoming events</h3>
+              
+            </form>
+          </div>
+          <h3 class="top-side-box"> <i class="fa fa-calendar"></i> Calendar of events &gt;&gt;</h3>
           asfdasfdas
-          <h3 class="bb" >Announcements</h3>
+          <h3 class="top-side-box"> <i class="fa fa-bullhorn"></i> Announcements &gt;&gt;</h3>
           asdfasfdas
         </div>
         <!-- Stories -->
