@@ -385,7 +385,7 @@ div#thumbnail-most-popular{
     margin-right: auto;
   }
 }
-/**********************************************************************************************************************/
+
 /*
 * Calendar of events
 */
@@ -399,14 +399,27 @@ div#calendar-box {
   overflow-y: scroll;
 }
 
-ul#calendar-list {
-  .list-in-box;
-}
-
 span.calendar-date{
   color: @labels-blue;
   padding-right: 1.5em;
   text-transform: uppercase;
+}
+
+ul#calendar-list, ul#announcements-list {
+  .list-in-box;
+}
+
+h3.main-boxes-margin{
+  margin-top: 10px;
+}
+
+/*
+* Announcements
+*/
+
+div#announcements-box {
+  max-height: 200px;
+  overflow-y: scroll;
 }
 
 /*
@@ -474,7 +487,7 @@ span.calendar-date{
   background-color: @banner-blue;
 }
 
-.top-side-box .nohoverfx:hover{
+h3.nohoverfx:hover{
   background-color: @side-box-blue; //no hover effect
 }
 
