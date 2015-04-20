@@ -45,6 +45,7 @@
 @divider:2em;
 @fixed-hieght:200px;
 @staff-stories-margin: 4px;
+@top-boxes-height: 214px;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -413,7 +414,7 @@ div#calendar-box, div#announcements-box{
 }
 
 div#calendar-box {
-  max-height: 200px;
+  max-height: @top-boxes-height;
   overflow-y: scroll;
 }
 
@@ -428,7 +429,7 @@ ul#calendar-list, ul#announcements-list {
 }
 
 h3.main-boxes-margin{
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 h3.top-boxes-margin{
@@ -440,7 +441,7 @@ h3.top-boxes-margin{
 */
 
 div#announcements-box {
-  max-height: 200px;
+  max-height: @top-boxes-height;
   overflow-y: scroll;
 }
 
@@ -455,6 +456,25 @@ div#low-statement {
   color: @statement-grey;
   padding: 0.4em 0 0.4em 1.5em;
   position: relative;
+
+  & > a{
+    color: @statement-grey;
+  }
+}
+
+.bottom-staff-stories{
+  .border-radiuses(0,15px,15px,0);
+  padding:@padding;
+  padding-right: 2em;
+  background-color: @side-box-blue;
+  color:white;
+  .font('Semibold');
+  font-size: 1.5em;
+  text-align: right;
+
+  & > a{
+  color:white;
+  }
 }
 
 /*
