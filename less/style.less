@@ -5,6 +5,7 @@
 // Colors
 @brand-bar-blue: #007db4;
 @brand-font-color: white;
+@labels-blue: #1a74ba;
 /////////
 @button-blue: #5aabd7;
 @side-box-blue: #5aabd7; // (sideboxes, buttons, time and weather)
@@ -193,7 +194,7 @@ img#iseek-logo-banner {
   float: left;
 }
 
-#select-location{
+select#select-location{
   background: 0 0;
   border: 0;
   font-size: 3em;
@@ -222,6 +223,76 @@ div#main-navbar-collapse-1 i.fa {
 
 div#main-navbar-collapse-1 ul.dropdown-menu li a{
   font-size: 1em;
+}
+
+/*
+* Search
+*/
+
+div#search-box{
+  padding: 1em;
+  border-right: 2px solid @bottom-grey;
+  border-left: 2px solid @bottom-grey;
+  border-bottom: 2px solid @bottom-grey;
+  .border-radiuses(0,15px,15px,0);
+
+  & label{
+    color: @labels-blue;
+  }
+}
+
+label[for='input-search-iseek']{
+  padding-top: 0.8em;
+}
+
+.rpad0{
+  padding-right: 0;
+}
+
+.lpad0{
+  padding-left: 0;
+}
+
+.lrpad0{
+  .rpad0;
+  .lpad0;
+}
+
+form#search-form{
+  font-size: 1.7em;
+}
+
+.search-button{
+  width: 100%;
+  background-color: @search-grey;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid grey;
+}
+
+.search-input{
+  width: 100%;
+}
+
+select#select-search{
+  background: 0 0;
+  border:0;
+  border-bottom: 3px solid @side-box-blue;
+  background-color: @side-box-blue;
+  color: white;
+  border-radius: 0;
+  -webkit-appearance: none; //removes border radius
+  text-indent: .5em;
+  padding-top: 0.2em;
+}
+
+div#search-links{
+  font-size: 0.9em;
+  padding-top: 0.8em;
+  color: @side-box-blue;
+  & a{
+    color: @labels-blue;
+  }
 }
 
 /*
@@ -255,11 +326,6 @@ div#caption-mi-title {
   font-size: @large-text;
 }
 
-div#caption-mi-snippet {
-  .font('Light');
-  font-size: 1.5em;
-}
-
 div.main-thumbnail{
   background-color: @bottom-grey;
   height: 276px;
@@ -279,8 +345,6 @@ div.main-thumbnail{
   }
   
 }
-
-
 
 div#thumbnail-most-popular{
   background-color: @most-popular-blue;
