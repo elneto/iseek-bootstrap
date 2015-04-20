@@ -36,6 +36,9 @@
 @community-grey: #e3e3d9;
 @footer-dark-blue: #0d3257;
 @footer-border: #668595;
+@text-grey: #4D4D4D;
+
+
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
@@ -46,6 +49,8 @@
 @fixed-hieght:200px;
 @staff-stories-margin: 4px;
 @top-boxes-height: 214px;
+@un-news-height:180px;
+
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -566,17 +571,36 @@ div.spotlight-thumbnail{
 .un-news{
   border-left: 2px  solid @bottom-grey; 
   border-right: 2px  solid @bottom-grey; 
-  height: @fixed-hieght;
+  height: @un-news-height;
   overflow-y: scroll;
 }
 .un-news ul{
   padding:1em;
   margin:0;
 }
-.un-news li{
+.un-news ul li{
   list-style-type: none;
   .underline;
 }
+.un-news ul li a{
+  color:#4D4D4D;
+}
+.un-news ul li.last{
+  text-align: center;
+  color:@brand-bar-blue;
+}
+.tip-content{
+  border-left: 2px  solid @bottom-grey; 
+  border-right: 2px  solid @bottom-grey; 
+  border-bottom: 2px  solid @bottom-grey; 
+  text-align: center;
+  padding: @padding;
+}
+.tip-content img{
+  width: 95%;
+  height:95%;
+  padding: @padding;
+} 
 .top-side-box:hover{
   background-color: @banner-blue;
 }
@@ -608,9 +632,12 @@ h3.nohoverfx:hover{
 .tjo{
   .border-radiuses(10px,0,0,10px);
   background-color:@tjo-green;
-  margin:0;
+  margin:0.6em 0 0 0;
   padding: @padding;
   
+}
+.tjo a{
+  color:@text-grey;
 }
 .tjo-content{
   background-color:#FFF;
@@ -618,6 +645,7 @@ h3.nohoverfx:hover{
   padding: @padding;
   overflow-y: scroll;
   height: @fixed-hieght;
+  font-weight:900;
   
 }
 .tjo-content ul{
@@ -630,12 +658,18 @@ h3.nohoverfx:hover{
   margin:0;
   .underline;
 }
+.tjo-content ul li a{
+  color:@text-grey;
+}
 .classifieds{
   .border-radiuses(10px,0,0,10px);
   background-color:@classifieds-brown;
-  margin:0;
+  margin:0.6em 0 0 0;
   padding: @padding;
   
+}
+.classifieds a{
+  color:@text-grey;
 }
 .classifieds-content{
   background-color:#FFF;
@@ -643,6 +677,7 @@ h3.nohoverfx:hover{
   height: @fixed-hieght;
   padding: @padding;
   overflow-y: scroll;
+  font-weight:900;
   
 }
 .classifieds-content ul{
@@ -655,17 +690,24 @@ h3.nohoverfx:hover{
   margin:0;
   .underline;
 }
+.classifieds-content ul li a{
+   color:#4D4D4D;
+}
 .staffunion{
   .border-radiuses(10px,0,0,10px);
   background-color:@staff-union-green;
   margin:0.6em 0 0 0;
   padding: @padding;
 }
+.staffunion a{
+  color: @text-grey;
+}
 .staffunion-content{
   background-color:#FFF;
   border-left: 4px  solid @staff-union-green;
   padding: @padding;
   overflow-y: scroll;
+  font-weight:bold;
   height: @fixed-hieght;
 }
 .staffunion-content ul{
@@ -678,18 +720,24 @@ h3.nohoverfx:hover{
   margin:0;
   .underline;
 }
+.staffunion-content ul li a{
+  color:@text-grey;
+}
 .community{
   .border-radiuses(10px,0,0,10px);
   background-color:@community-grey;
   margin:0.6em 0 0 0;
   padding: @padding;
 }
+.community a{
+  color: @text-grey;
+}
 .community-content{
   background-color:#FFF;
   border-left: 4px  solid @community-grey;
-  padding: @padding;
+  //padding: @padding;
   height: @fixed-hieght;
-  overflow-y: scroll;
+  font-weight:900;
 }
 .community-content ul{
   padding:@padding;
@@ -697,9 +745,12 @@ h3.nohoverfx:hover{
 }
 .community-content ul li {
   list-style-type: none;
-  //padding:@padding;
+  padding:@padding;
   margin:0;
   
+}
+.community-content ul li a{
+  color:@text-grey;
 }
 .twitter-border{
   border: 1px solid @bottom-grey;
