@@ -42,6 +42,7 @@
 @medium-text:1.4em;
 @small-text:1.2em;
 @divider:2em;
+@fixed-hieght:200px;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -397,6 +398,7 @@ span.calendar-date{
   color: #FFF;
   padding:@padding;
   margin-top:@divider;
+  vertical-align: middle;
 }
 .timezone{
   background-color:@side-box-blue;
@@ -452,6 +454,8 @@ span.calendar-date{
    background-color: @bottom-grey;
    color:@news-blue;
    margin-top: 0;
+   height: 2em;
+   //.opacity(0.8);
 }
 .staff-box{
   .border-radiuses(10px,10px,10px,10px);
@@ -471,18 +475,17 @@ span.calendar-date{
   margin:0;
   padding: @padding;
   
-   height: auto;
 }
 .tjo-content{
   background-color:#FFF;
   border-left: 4px  solid @tjo-green;
   padding: @padding;
   overflow-y: scroll;
- 
+  height: @fixed-hieght;
   
 }
 .tjo-content ul{
-  padding:0;
+  padding:@padding;
   margin:0;
 }
 .tjo-content ul li {
@@ -496,18 +499,18 @@ span.calendar-date{
   background-color:@classifieds-brown;
   margin:0;
   padding: @padding;
-  height: auto;
+  
 }
 .classifieds-content{
   background-color:#FFF;
   border-left: 4px  solid @classifieds-brown; 
-  height: 100%;
+  height: @fixed-hieght;
   padding: @padding;
   overflow-y: scroll;
   
 }
 .classifieds-content ul{
-  padding:0;
+  padding:@padding;
   margin: 0;
 }
 .classifieds-content ul li {
@@ -527,9 +530,10 @@ span.calendar-date{
   border-left: 4px  solid @staff-union-green;
   padding: @padding;
   overflow-y: scroll;
+  height: @fixed-hieght;
 }
 .staffunion-content ul{
-  padding:0;
+  padding:@padding;
   margin:0;
 }
 .staffunion-content ul li {
@@ -548,16 +552,21 @@ span.calendar-date{
   background-color:#FFF;
   border-left: 4px  solid @community-grey;
   padding: @padding;
+  height: @fixed-hieght;
+  overflow-y: scroll;
 }
 .community-content ul{
-  padding:0;
+  padding:@padding;
   margin:0;
 }
 .community-content ul li {
   list-style-type: none;
-  padding:@padding;
+  //padding:@padding;
   margin:0;
   
+}
+.twitter-border{
+  border: 1px solid @bottom-grey;
 }
 .large-text{
   font-size: @large-text;
@@ -571,9 +580,12 @@ span.calendar-date{
 .small-text{
   font-size: @small-text;
 }
+.social{
+  text-align: center;
+}
 .go{
   background-color: @button-blue;
-  padding:0;
+  //padding:0;
   .border-radiuses(0,0,0,0);
 }
 .toolkit{
@@ -584,6 +596,7 @@ span.calendar-date{
   margin: 2em 0 0 0;
   border-bottom: 1px white solid;
 }
+
 .dutystaion-container{
   padding: 0;
   margin: 0;
