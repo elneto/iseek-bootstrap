@@ -19,6 +19,8 @@
 @statement-blue: #dceced;
 @notification-background-blue: #dceced;
 /////////
+@list-font-grey: #4d4d4d;
+@division-grey: #c9c9c9;
 @bottom-grey: #efefef;
 @most-popular-blue: #edf6ff;
 @search-grey: #808080;
@@ -129,6 +131,28 @@
   font-family: Source Sans Pro @type, Helvetica, sans-serif;
 }
 
+.gray-border-box{
+  padding: 1em;
+  border-right: 2px solid @bottom-grey;
+  border-left: 2px solid @bottom-grey;
+  border-bottom: 2px solid @bottom-grey;
+  .border-radiuses(0,15px,15px,0);
+}
+
+.list-in-box{
+  list-style-type: none;
+  font-size: 1.7em;
+  margin-left: -2em;
+
+  & > li{
+    border-bottom: 1px solid @division-grey;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    color: @list-font-grey;
+  }
+
+}
+
 /*
 * Body
 */
@@ -228,14 +252,6 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
 * Search
 */
 
-.gray-border-box{
-  padding: 1em;
-  border-right: 2px solid @bottom-grey;
-  border-left: 2px solid @bottom-grey;
-  border-bottom: 2px solid @bottom-grey;
-  .border-radiuses(0,15px,15px,0);
-}
-
 div#search-box{
   .gray-border-box;
   & label{
@@ -301,10 +317,6 @@ div#search-links{
 * Staff stories and news
 */
 
-img#image-main-story {
-  
-}
-
 div#container-main-image {
   margin-top: 4px;
   margin-bottom: 4px;
@@ -363,6 +375,15 @@ div#thumbnail-most-popular{
 
 div#calendar-box, div#announcements-box{
   .gray-border-box;
+}
+
+ul#calendar-list {
+  .list-in-box;
+}
+
+span.calendar-date{
+  color: @labels-blue;
+  padding-right: 2em;
 }
 
 /*
