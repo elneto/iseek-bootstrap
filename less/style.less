@@ -17,6 +17,7 @@
 @menu-blue:#0071b9;
 /////////
 @statement-blue: #dceced;
+@statement-grey: #333333; 
 @notification-background-blue: #dceced;
 /////////
 @list-font-grey: #4d4d4d;
@@ -43,6 +44,7 @@
 @small-text:1.2em;
 @divider:2em;
 @fixed-hieght:200px;
+@staff-stories-margin: 4px;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -157,6 +159,22 @@
     color: @list-font-grey;
   }
 
+}
+
+/*
+* Shapes
+*/
+
+.arrow-right {
+  @side:16px;
+  width: 0; 
+  height: 0; 
+  border-top: @side solid transparent;
+  border-bottom: @side solid transparent;
+  border-left: @side solid @division-grey;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*
@@ -335,8 +353,8 @@ div#search-links{
 */
 
 div#container-main-image {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: @staff-stories-margin;
+  margin-bottom: @staff-stories-margin;
   position: relative;
 }
 
@@ -424,6 +442,19 @@ h3.top-boxes-margin{
 div#announcements-box {
   max-height: 200px;
   overflow-y: scroll;
+}
+
+/*
+* Statement
+*/
+
+div#low-statement {
+  background-color: @statement-blue;
+  font-size: 1.5em;
+  margin: @staff-stories-margin 0 @staff-stories-margin 0;
+  color: @statement-grey;
+  padding: 0.4em 0 0.4em 1.5em;
+  position: relative;
 }
 
 /*
