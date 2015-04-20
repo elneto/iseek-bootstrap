@@ -436,10 +436,14 @@ span.calendar-date{
    font-size: @large-text;
 }
 .un-news{
-  padding:1em;
-  margin:0;
   border-left: 2px  solid @bottom-grey; 
   border-right: 2px  solid @bottom-grey; 
+  height: @fixed-hieght;
+  overflow-y: scroll;
+}
+.un-news ul{
+  padding:1em;
+  margin:0;
 }
 .un-news li{
   list-style-type: none;
