@@ -478,6 +478,41 @@ div#low-statement {
 }
 
 /*
+* Spotlight
+*/
+
+h3#spotlight-box{
+   .border-radiuses(15px,0,0,15px);
+   background-color: @spotlight-grey;
+   color: @menu-blue;
+   padding:@padding;
+   margin-bottom: 0;
+   font-size: @large-text;
+
+   & > a{
+    color:white;
+   }
+}
+
+div.spotlight-thumbnail{
+  background-color: @bottom-grey;
+  color: @brand-bar-blue;
+  font-size: 1.8em;
+  overflow: hidden;
+  & > a{
+    text-decoration: none;
+    padding: 0.2em 0.2em 0 0.4em;
+    display: block;
+  }
+  
+  div#most-popular-title{
+  padding: .1em .2em 0 .4em;
+  font-size: 1.2em;
+  }
+  
+}
+
+/*
 * Submit Content
 */
 
