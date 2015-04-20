@@ -17,6 +17,7 @@
 @menu-blue:#0071b9;
 /////////
 @statement-blue: #dceced;
+@statement-grey: #333333; 
 @notification-background-blue: #dceced;
 /////////
 @list-font-grey: #4d4d4d;
@@ -43,6 +44,8 @@
 @small-text:1.2em;
 @divider:2em;
 @fixed-hieght:200px;
+@staff-stories-margin: 4px;
+@top-boxes-height: 214px;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -157,6 +160,22 @@
     color: @list-font-grey;
   }
 
+}
+
+/*
+* Shapes
+*/
+
+.arrow-right {
+  @side:16px;
+  width: 0; 
+  height: 0; 
+  border-top: @side solid transparent;
+  border-bottom: @side solid transparent;
+  border-left: @side solid @division-grey;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*
@@ -335,8 +354,8 @@ div#search-links{
 */
 
 div#container-main-image {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: @staff-stories-margin;
+  margin-bottom: @staff-stories-margin;
   position: relative;
 }
 
@@ -385,7 +404,7 @@ div#thumbnail-most-popular{
     margin-right: auto;
   }
 }
-/**********************************************************************************************************************/
+
 /*
 * Calendar of events
 */
@@ -395,18 +414,102 @@ div#calendar-box, div#announcements-box{
 }
 
 div#calendar-box {
-  max-height: 200px;
+  max-height: @top-boxes-height;
   overflow-y: scroll;
-}
-
-ul#calendar-list {
-  .list-in-box;
 }
 
 span.calendar-date{
   color: @labels-blue;
   padding-right: 1.5em;
   text-transform: uppercase;
+}
+
+ul#calendar-list, ul#announcements-list {
+  .list-in-box;
+}
+
+h3.main-boxes-margin{
+  margin-top: 14px;
+}
+
+h3.top-boxes-margin{
+  margin-top: 0;
+}
+
+/*
+* Announcements
+*/
+
+div#announcements-box {
+  max-height: @top-boxes-height;
+  overflow-y: scroll;
+}
+
+/*
+* Statement
+*/
+
+div#low-statement {
+  background-color: @statement-blue;
+  font-size: 1.5em;
+  margin: @staff-stories-margin 0 @staff-stories-margin 0;
+  color: @statement-grey;
+  padding: 0.4em 0 0.4em 1.5em;
+  position: relative;
+
+  & > a{
+    color: @statement-grey;
+  }
+}
+
+.bottom-staff-stories{
+  .border-radiuses(0,15px,15px,0);
+  padding:@padding;
+  padding-right: 2em;
+  background-color: @side-box-blue;
+  color:white;
+  .font('Semibold');
+  font-size: 1.5em;
+  text-align: right;
+
+  & > a{
+  color:white;
+  }
+}
+
+/*
+* Spotlight
+*/
+
+h3#spotlight-box{
+   .border-radiuses(15px,0,0,15px);
+   background-color: @spotlight-grey;
+   color: @menu-blue;
+   padding:@padding;
+   margin-bottom: 0;
+   font-size: @large-text;
+
+   & > a{
+    color:white;
+   }
+}
+
+div.spotlight-thumbnail{
+  background-color: @bottom-grey;
+  color: @brand-bar-blue;
+  font-size: 1.8em;
+  overflow: hidden;
+  & > a{
+    text-decoration: none;
+    padding: 0.2em 0.2em 0 0.4em;
+    display: block;
+  }
+  
+  div#most-popular-title{
+  padding: .1em .2em 0 .4em;
+  font-size: 1.2em;
+  }
+  
 }
 
 /*
@@ -478,7 +581,7 @@ span.calendar-date{
   background-color: @banner-blue;
 }
 
-.top-side-box .nohoverfx:hover{
+h3.nohoverfx:hover{
   background-color: @side-box-blue; //no hover effect
 }
 
