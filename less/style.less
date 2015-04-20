@@ -35,6 +35,7 @@
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
+@content-large-text:1.6em;
 @medium-text:1.4em;
 @small-text:1.2em;
 @divider:2em;
@@ -358,12 +359,16 @@ div#thumbnail-most-popular{
 }
 .staff-box{
   .border-radiuses(10px,10px,10px,10px);
-  //background-color:@notification-background-blue;
+  background-color:@notification-background-blue;
   padding:@padding;
   margin-top:@divider;
  // border: 1px solid @notification-background-blue;
 
 }
+.staff-box .row{
+  //border-bottom: 1px solid #FFF;
+}
+
 .tjo{
   .border-radiuses(10px,0,0,10px);
   background-color:@tjo-green;
@@ -374,7 +379,8 @@ div#thumbnail-most-popular{
 .tjo-content{
   background-color:#FFF;
   border-left: 4px  solid @tjo-green;
-
+  padding: @padding;
+  overflow-y: scroll;
 }
 .tjo-content ul{
   padding:0;
@@ -391,13 +397,14 @@ div#thumbnail-most-popular{
   background-color:@classifieds-brown;
   margin:0;
   padding: @padding;
-  height: auto;
-  display: flex; 
-}
+  height: 100%;
+  }
 .classifieds-content{
   background-color:#FFF;
   border-left: 4px  solid @classifieds-brown; 
   height: 100%;
+  padding: @padding;
+  overflow-y: scroll;
 }
 .classifieds-content ul{
   padding:0;
@@ -419,6 +426,7 @@ div#thumbnail-most-popular{
   background-color:#FFF;
   border-left: 4px  solid @staff-union-green;
   padding: @padding;
+  overflow-y: scroll;
 }
 .staffunion-content ul{
   padding:0;
@@ -453,6 +461,9 @@ div#thumbnail-most-popular{
 }
 .large-text{
   font-size: @large-text;
+}
+.content-large-text {
+  font-size: @content-large-text;
 }
 .medium-text{
   font-size: @medium-text;
