@@ -621,7 +621,8 @@ h3.nohoverfx:hover{
   background-color:@notification-background-blue;
   padding:@padding;
   margin-top:@divider;
- // border: 1px solid @notification-background-blue;
+
+ // border:er: 1px solid @notification-background-blue;
 
 }
 .staff-box .row{
@@ -753,7 +754,8 @@ h3.nohoverfx:hover{
 }
 .twitter-border{
   border: 1px solid @bottom-grey;
-}
+  width: 100%;
+  
 .large-text{
   font-size: @large-text;
 }
@@ -903,17 +905,33 @@ h3.nohoverfx:hover{
   margin: 0;
 }
 .footer-menu-items{
-  background-color: @footer-highlighted-blue;
+  //background-color: @footer-highlighted-blue;
   // .border-radiuses(0,10px,0px,0);
   height: 100%;
   padding-bottom: 100%;
   margin-bottom: -100%;
-  margin-left: 2em;
-  color:@footer-dark-blue;
+  //margin-left: 2em;
+  color:#FFF;
+}
+.footer-menu-items  h5{
+  background-color: @footer-dark-blue;
+  padding:@padding;
+  margin-bottom: 0;
+  .border-radiuses(10px,0,0,10px);
+  //color:@footer-dark-blue;
+  }
+.footer-menu-items  ul{
+  padding:0;
+  background-color: @footer-highlighted-blue;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0.5em;
+  color:@text-grey;
 }
 .footer-menu-items  li{
   list-style-type: none;
-  padding: @padding;
+  padding-left: 0.5em;
   margin: 0;
   text-align: left;
 }
@@ -958,13 +976,11 @@ h3.nohoverfx:hover{
 
 /*
 * Media queries (phones)
-*/
+
 
 @media (max-width: 480px) { 
-
   select#select-location {
     margin-left: 0;
     margin-top: 0.5em;
-  }
-
- }
+   }
+ }*/
