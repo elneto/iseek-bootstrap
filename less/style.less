@@ -43,6 +43,7 @@
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
+@less-large-text:0.9em;
 @content-large-text:1.6em;
 @medium-text:1.4em;
 @small-text:1.2em;
@@ -310,7 +311,6 @@ label[for='input-search-iseek']{
 .rpad0{
   padding-right: 0;
 }
-
 .lpad0{
   padding-left: 0;
 }
@@ -540,14 +540,28 @@ div.spotlight-thumbnail{
 * Submit Content
 */
 
-.submit{
+div.margin-submit{
+  margin-top: -2.5em;
+  margin-bottom: -2.5em;
+}
+
+span.less-large{
+  font-size: @less-large-text;
+}
+
+.submit-content{
   background-color: @add-content-blue;
   .border-radius(10px);
-  color: #FFF;
+  color: white;
   padding:@padding;
   margin-top:@divider;
   vertical-align: middle;
+  .font('Light');
+  & > a{
+    color: white;
+  }
 }
+
 .timezone{
   background-color:@side-box-blue;
   .border-radius(10px);
@@ -789,10 +803,13 @@ h3.nohoverfx:hover{
 .social{
   text-align: center;
 }
-.go{
+button#go-button{
   background-color: @button-blue;
-  //padding:0;
   .border-radiuses(0,0,0,0);
+  color: white;
+  .font('Semibold');
+  font-size: 1.3em;
+  padding: 0.1em 0.2em 0 0.2em;
 }
 .toolkit{
   .border-radiuses(10px,0,0,10px);
@@ -917,7 +934,8 @@ h3.nohoverfx:hover{
   background-color: @footer-dark-blue;
   
 }
-.about-us {
+
+.about-us{
   color:white;
   padding:@padding;
   margin: 0;
