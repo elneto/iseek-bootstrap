@@ -900,6 +900,8 @@ h3.nohoverfx:hover{
 }
 .footer-menu-items{
   height: 100%;
+  
+  //margin-left: 2em;
   color:#FFF;
 }
 .footer-menu-items  h5{
@@ -908,6 +910,7 @@ h3.nohoverfx:hover{
   margin-bottom: 0;
   .border-radiuses(10px,0,0,10px);
  }
+  
 .footer-menu-items  ul{
   padding:0;
   background-color: @footer-highlighted-blue;
@@ -966,7 +969,7 @@ h3.nohoverfx:hover{
 * Media queries (phones)
 */
 
-@media(min-width:@screen-tablet){ 
+@media(max-width: 480px) { 
   select#select-location {
     margin-left: 0;
     margin-top: 0.5em;
