@@ -42,6 +42,7 @@
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
+@less-large-text:0.9em;
 @content-large-text:1.6em;
 @medium-text:1.4em;
 @small-text:1.2em;
@@ -520,13 +521,18 @@ div.spotlight-thumbnail{
 * Submit Content
 */
 
-.submit{
+span.less-large{
+  font-size: @less-large-text;
+}
+
+.submit-content{
   background-color: @add-content-blue;
   .border-radius(10px);
   color: #FFF;
   padding:@padding;
   margin-top:@divider;
   vertical-align: middle;
+  .font('Light');
 }
 .timezone{
   background-color:@side-box-blue;
