@@ -12,7 +12,8 @@
 /////////
 @news-blue: #1c90ce;
 @banner-blue: #1c90ce;
-@footer-highlighted-blue: #b7e3fe;
+@footer-highlighted-blue: rgb(237,245,255);
+
 ///////
 @menu-blue:#0071b9;
 /////////
@@ -397,6 +398,7 @@ div.main-thumbnail{
   padding: .1em .2em 0 .4em;
   font-size: 1.2em;
   }
+
   
 }
 
@@ -560,7 +562,7 @@ div.spotlight-thumbnail{
    padding:@padding;
    margin-top:@divider;
    margin-bottom: 0;
-   .font('Light');
+   //.font('');
    font-size: @large-text;
 
    & > a{
@@ -593,11 +595,12 @@ div.spotlight-thumbnail{
   border-right: 2px  solid @bottom-grey; 
   border-bottom: 2px  solid @bottom-grey; 
   text-align: center;
+  height: @un-news-height;
   padding: @padding;
 }
 .tip-content img{
-  width: 95%;
-  height:95%;
+  width: 80%;
+  height:60%;
   padding: @padding;
 } 
 .top-side-box:hover{
@@ -639,8 +642,6 @@ h3.nohoverfx:hover{
   padding: @padding;
   overflow-y: scroll;
   height: @fixed-hieght;
-  font-weight:900;
-  
 }
 .tjo-content ul{
   padding:@padding;
@@ -670,9 +671,7 @@ h3.nohoverfx:hover{
   border-left: 4px  solid @classifieds-brown; 
   height: @fixed-hieght;
   padding: @padding;
-  overflow-y: scroll;
-  font-weight:900;
-  
+  overflow-y: scroll; 
 }
 .classifieds-content ul{
   padding:@padding;
@@ -701,7 +700,6 @@ h3.nohoverfx:hover{
   border-left: 4px  solid @staff-union-green;
   padding: @padding;
   overflow-y: scroll;
-  font-weight:bold;
   height: @fixed-hieght;
 }
 .staffunion-content ul{
@@ -731,7 +729,6 @@ h3.nohoverfx:hover{
   border-left: 4px  solid @community-grey;
   padding: @padding;
   height: @fixed-hieght;
-  font-weight:900;
 }
 .community-content ul{
   padding:@padding;
@@ -803,6 +800,10 @@ h3.nohoverfx:hover{
   padding-left:0.5em;
   padding-right:0.5em;
 }
+.duty-margin{
+  margin-left:0.02em;
+  margin-right:0.02em;
+}
 .underline{
   border-bottom: 1px #CCC solid;
 }
@@ -838,15 +839,16 @@ h3.nohoverfx:hover{
 .left-menu{
   .border-radiuses(0,0px,10px,0);
    background-color:@footer-dark-blue;
-
+   padding-bottom: 100%;  
+   margin-bottom: -100%;
    height: 100%;
-   border-right: 1px solid #FFF;
+   border-right: 1px solid white;
 }
 .toolkit-row{
   overflow: hidden;
 }
-.partners{
-  color:#FFF;
+.partners {
+  color:white;
   padding: 0;
   text-align: left;
 }
@@ -856,12 +858,15 @@ h3.nohoverfx:hover{
   margin: 0;
   text-align: left;
 }
+.partners li a{
+  color:white;
+}
 .tabs-container{
   padding:0;
   margin: 0;
 }
 .tabs{
-  color:#FFF;
+  color:white;
   padding: 0;
   margin: 0;
   text-align: left;
@@ -881,12 +886,15 @@ h3.nohoverfx:hover{
   background-color: @footer-dark-blue;
   
 }
-.about-us{
-  color:#FFF;
+.about-us {
+  color:white;
   padding:@padding;
   margin: 0;
   width: 100%;
 }
+.about-us a{
+  color:white;
+  }
 .footer-background{
   background-color: @side-box-blue;
   //height: inherit;
@@ -904,7 +912,7 @@ h3.nohoverfx:hover{
   height: 100%;
   
   //margin-left: 2em;
-  color:#FFF;
+  color:white;
 }
 .footer-menu-items  h5{
   background-color: @footer-dark-blue;
@@ -928,9 +936,16 @@ h3.nohoverfx:hover{
   margin: 0;
   text-align: left;
 }
+.footer-menu-items  li a{
+  color:@text-grey;
+}
 .logo-footer{
   padding: @padding;
   text-align: left;
+  width:80%;
+  height:80%;
+  margin-top: 5em;
+  margin-bottom: 3em;
 }
 /*
  * Footer
