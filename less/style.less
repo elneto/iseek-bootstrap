@@ -1057,7 +1057,7 @@ button#go-button{
 }
 
 /*
-* Media queries (phones)
+* Media queries (phones) 
 */
 
 @media (max-width: @phone-width) { 
@@ -1150,6 +1150,21 @@ button#go-button{
   }
   .search-button{
     padding-left: 3px !important;
+  }
+}
+
+/*
+* Media queries iphone 5 landscape
+*/
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+
+  .search-button, .search-input {
+    -webkit-appearance: none;
+    height: 1.8em;
   }
 }
 
