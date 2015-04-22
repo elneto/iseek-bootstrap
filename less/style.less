@@ -12,7 +12,8 @@
 /////////
 @news-blue: #1c90ce;
 @banner-blue: #1c90ce;
-@footer-highlighted-blue: #b7e3fe;
+@footer-highlighted-blue: rgb(237,245,255);
+
 ///////
 @menu-blue:#0071b9;
 /////////
@@ -42,7 +43,6 @@
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
-@less-large-text:0.9em;
 @content-large-text:1.6em;
 @medium-text:1.4em;
 @small-text:1.2em;
@@ -51,7 +51,9 @@
 @staff-stories-margin: 4px;
 @top-boxes-height: 214px;
 @un-news-height:180px;
-
+@phone-width:480px;
+@tablet-min-width:480px;
+@tablet-max-width:1200px;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -308,6 +310,7 @@ label[for='input-search-iseek']{
 .rpad0{
   padding-right: 0;
 }
+
 .lpad0{
   padding-left: 0;
 }
@@ -413,6 +416,7 @@ div.main-thumbnail{
   padding: .1em .2em 0 .4em;
   font-size: 1.2em;
   }
+
   
 }
 
@@ -536,26 +540,13 @@ div.spotlight-thumbnail{
 * Submit Content
 */
 
-div.margin-submit{
-  margin-top: -2.5em;
-  margin-bottom: -2.5em;
-}
-
-span.less-large{
-  font-size: @less-large-text;
-}
-
-.submit-content{
+.submit{
   background-color: @add-content-blue;
   .border-radius(10px);
-  color: white;
+  color: #FFF;
   padding:@padding;
   margin-top:@divider;
   vertical-align: middle;
-  .font('Light');
-  & > a{
-    color: white;
-  }
 }
 .timezone{
   background-color:@side-box-blue;
@@ -563,6 +554,9 @@ span.less-large{
   color: #FFF;
   padding:@padding;
   margin-top: @divider;
+}
+.time{
+  .underline;
 }
 .facebook{
   color:#44619d;
@@ -589,7 +583,7 @@ span.less-large{
    padding:@padding;
    margin-top:@divider;
    margin-bottom: 0;
-   .font('Light');
+   //.font('');
    font-size: @large-text;
 
    & > a{
@@ -622,11 +616,12 @@ span.less-large{
   border-right: 2px  solid @bottom-grey; 
   border-bottom: 2px  solid @bottom-grey; 
   text-align: center;
+  height: @un-news-height;
   padding: @padding;
 }
 .tip-content img{
-  width: 95%;
-  height:95%;
+  width: 80%;
+  height:60%;
   padding: @padding;
 } 
 .top-side-box:hover{
@@ -673,8 +668,6 @@ h3.nohoverfx:hover{
   padding: @padding;
   overflow-y: scroll;
   height: @fixed-hieght;
-  font-weight:900;
-  
 }
 .tjo-content ul{
   padding:@padding;
@@ -704,9 +697,7 @@ h3.nohoverfx:hover{
   border-left: 4px  solid @classifieds-brown; 
   height: @fixed-hieght;
   padding: @padding;
-  overflow-y: scroll;
-  font-weight:900;
-  
+  overflow-y: scroll; 
 }
 .classifieds-content ul{
   padding:@padding;
@@ -735,7 +726,6 @@ h3.nohoverfx:hover{
   border-left: 4px  solid @staff-union-green;
   padding: @padding;
   overflow-y: scroll;
-  font-weight:bold;
   height: @fixed-hieght;
 }
 .staffunion-content ul{
@@ -765,7 +755,6 @@ h3.nohoverfx:hover{
   border-left: 4px  solid @community-grey;
   //padding: @padding;
   height: @fixed-hieght;
-  font-weight:900;
 }
 .community-content ul{
   padding:@padding;
@@ -782,6 +771,8 @@ h3.nohoverfx:hover{
 }
 .twitter-border{
   border: 1px solid @bottom-grey;
+  width: 100%;
+  text-align: center;
 }
 .large-text{
   font-size: @large-text;
@@ -798,13 +789,10 @@ h3.nohoverfx:hover{
 .social{
   text-align: center;
 }
-button#go-button{
+.go{
   background-color: @button-blue;
+  //padding:0;
   .border-radiuses(0,0,0,0);
-  color: white;
-  .font('Semibold');
-  font-size: 1.3em;
-  padding: 0.1em 0.2em 0 0.2em;
 }
 .toolkit{
   .border-radiuses(10px,0,0,10px);
@@ -814,7 +802,12 @@ button#go-button{
   margin: 2em 0 0 0;
   border-bottom: 1px white solid;
 }
-
+.timezone-pad-r0{
+  padding-right: 0;
+}
+.timezone-pad-l0{
+  padding-left: 0;
+}
 .dutystaion-container{
   padding: 0;
   margin: 0;
@@ -837,6 +830,10 @@ button#go-button{
 .duty-padding{
   padding-left:0.5em;
   padding-right:0.5em;
+}
+.duty-margin{
+  margin-left:0.02em;
+  margin-right:0.02em;
 }
 .underline{
   border-bottom: 1px #CCC solid;
@@ -873,16 +870,16 @@ button#go-button{
 .left-menu{
   .border-radiuses(0,0px,10px,0);
    background-color:@footer-dark-blue;
-   padding-bottom: 100%;
+   padding-bottom: 100%;  
    margin-bottom: -100%;
    height: 100%;
-   border-right: 1px solid #FFF;
+   border-right: 1px solid white;
 }
 .toolkit-row{
   overflow: hidden;
 }
-.partners{
-  color:#FFF;
+.partners {
+  color:white;
   padding: 0;
   text-align: left;
 }
@@ -892,12 +889,15 @@ button#go-button{
   margin: 0;
   text-align: left;
 }
+.partners li a{
+  color:white;
+}
 .tabs-container{
   padding:0;
   margin: 0;
 }
 .tabs{
-  color:#FFF;
+  color:white;
   padding: 0;
   margin: 0;
   text-align: left;
@@ -917,12 +917,15 @@ button#go-button{
   background-color: @footer-dark-blue;
   
 }
-.about-us{
+.about-us {
   color:white;
   padding:@padding;
   margin: 0;
   width: 100%;
 }
+.about-us a{
+  color:white;
+  }
 .footer-background{
   background-color: @side-box-blue;
   //height: inherit;
@@ -935,23 +938,46 @@ button#go-button{
   margin: 0;
 }
 .footer-menu-items{
-  background-color: @footer-highlighted-blue;
+  //background-color: @footer-highlighted-blue;
   // .border-radiuses(0,10px,0px,0);
   height: 100%;
   padding-bottom: 100%;
   margin-bottom: -100%;
-  margin-left: 2em;
-  color:@footer-dark-blue;
+  //margin-left: 2em;
+  color:white;
+}
+.footer-menu-items  h5{
+  background-color: @footer-dark-blue;
+  padding:@padding;
+  margin-bottom: 0;
+  .border-radiuses(10px,0,0,10px);
+  //color:@footer-dark-blue;
+  }
+.footer-menu-items  ul{
+  padding:0;
+  background-color: @footer-highlighted-blue;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0.5em;
+  color:@text-grey;
 }
 .footer-menu-items  li{
   list-style-type: none;
-  padding: @padding;
+  padding-left: 0.5em;
   margin: 0;
   text-align: left;
+}
+.footer-menu-items  li a{
+  color:@text-grey;
 }
 .logo-footer{
   padding: @padding;
   text-align: left;
+  width:80%;
+  height:80%;
+  margin-top: 5em;
+  margin-bottom: 3em;
 }
 /*
  * Footer
@@ -992,12 +1018,45 @@ button#go-button{
 * Media queries (phones)
 */
 
-@media (max-width: 480px) { 
+@media (max-width: @phone-width) { 
 
   select#select-location {
     margin-left: 0;
     margin-top: 0.5em;
   }
+  .time{
+      border-bottom: 0px;
+  };
+  .temp{
+    .underline;
+  };
+  .timezone-pad-r0{
+   padding:@padding;
+  }
+  .timezone-pad-l0{
+   padding:@padding;
+  }
+  .dutystaion{
+    border-right: 0;
+  text-align: center;
+  }
+  .dutystaion-last{
+  text-align: center;
+  }
+  .weather-icon{
+     text-align: center;
+  }
+  .duty-margin{
+    margin:0;
+  }
+  .dutystaion-container{
+    text-align: center;
+  };
+
+  .left-menu{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  };
 
   div#caption-mi-title {
     font-size: 1.2em;
@@ -1012,5 +1071,91 @@ button#go-button{
   div.main-thumbnail div#most-popular-title{
     text-align: center;
   }
+}
 
- }
+/*
+* Media queries (tablets - landscape)
+*/
+@media (min-width: @tablet-min-width) and (max-width:@tablet-max-width) and (orientation: landscape){
+  .time{
+      border-bottom: 0px;
+  };
+  .temp{
+    .underline;
+  };
+   .timezone-pad-r0{
+   padding:@padding;
+  }
+  .timezone-pad-l0{
+   padding:@padding;
+  }
+  .dutystaion{
+    border-right: 0;
+    text-align: center;
+  }
+  .dutystaion-last{
+  text-align: center;
+  }
+  .weather-icon{
+     text-align: center;
+  }
+  .duty-margin{
+    margin:0.2em;
+  }
+  .dutystaion-container{
+    text-align: center;
+  };
+  .left-menu{
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+  }; 
+  #twitter-widget-0 { 
+      width: 100% !important; 
+    }
+}
+/*
+* Media queries (tablets- portrait)
+*/
+
+@media (min-width: @tablet-min-width) and (max-width:@tablet-max-width) and (orientation: portrait){ 
+  .time{
+      border-bottom: 0px;
+  };
+  .temp{
+    .underline;
+  };
+   .timezone-pad-r0{
+   padding:@padding;
+  }
+  .timezone-pad-l0{
+   padding:@padding;
+  }
+  .dutystaion{
+    border-right: 0;
+    text-align: center;
+  }
+  .dutystaion-last{
+  text-align: center;
+  }
+  .weather-icon{
+     text-align: center;
+  }
+  .duty-margin{
+    margin:0.2em;
+  }
+  .dutystaion-container{
+    text-align: center;
+  };
+   .left-menu{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  };
+  #twitter-widget-0 { 
+      width: 100% !important; 
+    };
+  .logo-footer{
+    width: 40%;
+    height: 40%;
+  }
+}
+
