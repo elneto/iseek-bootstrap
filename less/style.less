@@ -587,6 +587,8 @@ div.spotlight-thumbnail{
 .un-news ul li{
   list-style-type: none;
   .underline;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .un-news ul li a{
   color:#4D4D4D;
@@ -601,7 +603,7 @@ div.spotlight-thumbnail{
   border-bottom: 2px  solid @bottom-grey; 
   text-align: center;
   height: @un-news-height;
-  padding: @padding;
+  padding:1em;
 }
 .tip-content img{
   width: 80%;
@@ -659,7 +661,8 @@ h3.nohoverfx:hover{
 }
 .tjo-content ul li {
   list-style-type: none;
-  padding:0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   margin:0;
   .underline;
 }
@@ -689,7 +692,8 @@ h3.nohoverfx:hover{
 }
 .classifieds-content ul li {
   list-style-type: none;
-  padding:0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   margin:0;
   .underline;
 }
@@ -713,12 +717,13 @@ h3.nohoverfx:hover{
   height: @fixed-hieght;
 }
 .staffunion-content ul{
-  padding:@padding;
+  padding: 0;
   margin:0;
 }
 .staffunion-content ul li {
   list-style-type: none;
-  padding:0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   margin:0;
   .underline;
 }
@@ -737,7 +742,7 @@ h3.nohoverfx:hover{
 .community-content{
   background-color:#FFF;
   border-left: 4px  solid @community-grey;
-  //padding: @padding;
+ 
   height: @fixed-hieght;
 }
 .community-content ul{
@@ -772,6 +777,10 @@ h3.nohoverfx:hover{
 }
 .social{
   text-align: center;
+  border: 1px solid @bottom-grey;
+}
+.social a {
+  margin: 0.5em;
 }
 .go{
   background-color: @button-blue;
@@ -780,7 +789,7 @@ h3.nohoverfx:hover{
 }
 .toolkit{
   .border-radiuses(10px,0,0,10px);
-  background-color:@footer-dark-blue;
+  background-color:@footer-background-blue;
   color:#FFF;
   padding:@padding;
   margin: 2em 0 0 0;
@@ -853,7 +862,7 @@ h3.nohoverfx:hover{
 }
 .left-menu{
   .border-radiuses(0,0px,10px,0);
-   background-color:@footer-dark-blue;
+   background-color:@footer-background-blue;
    padding-bottom: 100%;  
    margin-bottom: -100%;
    height: 100%;
@@ -870,7 +879,7 @@ h3.nohoverfx:hover{
 .partners li{
   list-style-type: none;
   padding: @padding;
-  margin: 0;
+  margin: @padding;
   text-align: left;
 }
 .partners li a{
@@ -898,8 +907,11 @@ h3.nohoverfx:hover{
   padding:@padding;
   margin: 0.5em 0 0.5em 0;
   text-align: left; 
-  background-color: @footer-dark-blue;
+  background-color: @footer-background-blue;
   
+}
+.about-us-xs{
+  display: none;
 }
 .about-us {
   color:white;
@@ -907,7 +919,7 @@ h3.nohoverfx:hover{
   margin: 0;
   width: 100%;
 }
-.about-us a{
+.about-us a, .about-us-xs a{
   color:white;
   }
 .footer-background{
@@ -931,7 +943,7 @@ h3.nohoverfx:hover{
   color:white;
 }
 .footer-menu-items  h5{
-  background-color: @footer-dark-blue;
+  background-color: @footer-background-blue;
   padding:@padding;
   margin-bottom: 0;
   .border-radiuses(10px,0,0,10px);
@@ -958,8 +970,8 @@ h3.nohoverfx:hover{
 .logo-footer{
   padding: @padding;
   text-align: left;
-  width:80%;
-  height:80%;
+  width:90%;
+  height:90%;
   margin-top: 5em;
   margin-bottom: 3em;
 }
@@ -1041,6 +1053,22 @@ h3.nohoverfx:hover{
     padding-bottom: 0;
     margin-bottom: 0;
   };
+  .social a {
+    margin: 0.2em;
+  };
+  .about-us-xs{
+    display: block;
+    background-color: @footer-background-blue;
+    color:white;
+    padding:@padding;
+  }
+  .about-us{
+    display: none;
+  }
+   .left-menu{
+    border-right: 0;
+    .border-radiuses(0,0,0,0);
+  }
 }
 
 /*
@@ -1082,6 +1110,7 @@ h3.nohoverfx:hover{
   #twitter-widget-0 { 
       width: 100% !important; 
     }
+
 }
 /*
 * Media queries (tablets- portrait)
@@ -1126,6 +1155,19 @@ h3.nohoverfx:hover{
   .logo-footer{
     width: 40%;
     height: 40%;
+  }
+  .about-us-xs{
+   display: block;
+    background-color: @footer-background-blue;
+    color:white;
+    padding:@padding;
+  }
+  .about-us{
+    display: none;
+  }
+  .left-menu{
+    border-right: 0;
+    .border-radiuses(0,0,0,0);
   }
 }
 
