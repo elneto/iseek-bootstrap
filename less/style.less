@@ -274,6 +274,49 @@ select#select-location{
   background: url(../images/triangle10.png) no-repeat right;
 }
 
+#location-navbar{
+  font-size: 3em;
+  color: @brand-bar-blue;
+  margin-top: 1.15em;
+  margin-left: 0.37em;
+
+  .dropdown-menu{
+    background-color: @button-blue;
+  }
+
+  .dropdown-menu>li>a{
+    color:white;
+
+    &:hover{
+      color: @button-blue;
+      background-color: white;   
+    }
+  }
+
+  .navbar-nav>li>a:hover{
+    background-color: @button-blue;
+    color:white;
+  }
+
+  .navbar-nav>li>a:focus{
+    background-color: @button-blue;
+    color:white;
+  }
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: @brand-bar-blue;
+    background-color: white;
+    &:hover{
+      color: @brand-bar-blue;
+      background-color: white;
+    }
+    &:focus{
+      color: @brand-bar-blue;
+      background-color: white;
+    }
+  }
+
 /*
 * Main nav menu
 */
@@ -576,7 +619,6 @@ span.less-large{
   padding:@padding;
   margin-top:@divider;
   vertical-align: middle;
-  //.font('Light');
   & > a{
     color: white;
   }
@@ -1080,6 +1122,13 @@ button#go-button{
     margin-top: 0.9em;
     font-size: 2em;
   }
+  #location-navbar {
+    margin-left: 0;
+    margin-top: 0.9em;
+    font-size: 2em;
+    color: @brand-bar-blue;
+  }
+
   .time{
       border-bottom: 0px;
   };

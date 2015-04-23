@@ -17,3 +17,7 @@ $(function() {
     }
   });
 });
+
+$("#ul-location li").on("click", function(){
+  $("#location-display").text($(this).text());
+});
