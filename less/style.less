@@ -346,6 +346,10 @@ form#search-form{
   width: 100%;
 }
 
+.search-button, .search-input {
+    height: 1.8em;
+  }
+
 select#select-search{
   background: 0 0;
   border:0;
@@ -353,10 +357,10 @@ select#select-search{
   color: white;
   border-radius: 0;
   -webkit-appearance: none; //removes border radius
-  text-indent: .5em;
   padding-top: 0.2em;
   background: url(../images/trianglew10.png)no-repeat right @side-box-blue;
   background-position: 94% 60%;
+  padding-left: 6px;
 }
 
 div#search-links{
@@ -1062,6 +1066,10 @@ button#go-button{
 
 @media (max-width: @phone-width) { 
 
+  input#login-name, input#login-password {
+    width: 7em;
+  }
+
   select#select-location {
     margin-left: 0;
     margin-top: 0.9em;
@@ -1146,7 +1154,6 @@ button#go-button{
 
   .search-button, .search-input {
     -webkit-appearance: none;
-    height: 1.8em;
   }
   .search-button{
     padding-left: 3px !important;
@@ -1164,7 +1171,6 @@ and (orientation : landscape) {
 
   .search-button, .search-input {
     -webkit-appearance: none;
-    height: 1.8em;
   }
 }
 
@@ -1210,6 +1216,10 @@ and (orientation : landscape) {
 
   div#calendar-box, div#announcements-box {
     max-height: 172px;
+  }
+
+  .search-button, .search-input {
+    -webkit-appearance: none;
   }
 
 }
@@ -1297,7 +1307,6 @@ and (orientation : landscape) {
 
   .search-button, .search-input {
     -webkit-appearance: none;
-    height: 1.8em;
   }
   
 }
