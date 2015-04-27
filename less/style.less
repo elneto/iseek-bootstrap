@@ -293,6 +293,10 @@ img#un-top-logo {
   padding-bottom: 2px;
 }
 
+a#language-links {
+  float: right;
+}
+
 /*
 * Top banner
 */
@@ -300,10 +304,6 @@ img#un-top-logo {
 img#iseek-logo-banner {
   padding-top: 20px;
   /*float: left;*/
-}
-
-.blue-borr{
-  border-right: 1px solid @brand-bar-blue;
 }
 
 div#banner-separation{
@@ -324,7 +324,6 @@ select#select-location{
   -webkit-appearance: none;
   padding-right: 0.7em;
   background: url(../images/triangle10.png) no-repeat right;
-  /*float: left;*/
 }
 
 div#location-navbar{
@@ -1132,6 +1131,13 @@ button#go-button{
 /*
 * Media queries (phones) 
 */
+
+@media (max-width: 1200px) { 
+
+  a#language-links {
+    float: none;
+  }
+}
 
 @media (max-width: @phone-width) { 
 
