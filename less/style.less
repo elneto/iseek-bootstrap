@@ -208,9 +208,16 @@
   padding-left: 0;
 }
 
-.lrpad0{
-  .rpad0;
-  .lpad0;
+.search-rpad0{
+  padding-right: 0;
+}
+.search-lpad0{
+  padding-left: 0;
+}
+
+.search-lrpad0{
+  padding-right: 0;
+  padding-left: 0;  
 }
 
 .rpad5{
@@ -1118,27 +1125,6 @@ button#go-button{
 }
 
 /*
- * Gray blocks for scaffolding
- */
-
-.bb{
-  background-color: gray;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  color:white;
-  padding:0.5em;
-}
-
-.bor{
-  border: 1px solid gray;
-}
-
-.blue-thing{
-  background-color: #007db4;
-  color:white;
-}
-
-/*
 * Media queries (phones) 
 */
 
@@ -1209,12 +1195,6 @@ button#go-button{
     text-align: center;
   }
 
-  .rpad5{
-    padding-right: 15px;
-  }
-  .lpad5{
-    padding-left: 15px;
-  }
 
   h3.top-boxes-margin {
     margin-top: 0.5em;
@@ -1253,6 +1233,15 @@ button#go-button{
     border: none;
     margin-top: 0;
   }
+
+  //reset the padding to normal
+  .rpad0, .rpad5, .rpad75{
+    padding-right: 15px;
+  }
+  .lpad0, .lpad5, .lpad75{
+    padding-left: 15px;
+  }
+
 
 }
 
