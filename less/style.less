@@ -299,15 +299,19 @@ img#un-top-logo {
 
 img#iseek-logo-banner {
   padding-top: 20px;
+  /*float: left;*/
 }
 
-#banner-separation{
+.blue-borr{
+  border-right: 1px solid @brand-bar-blue;
+}
+
+div#banner-separation{
   background-color: @brand-bar-blue;
   display: block;
   width: 1px;
-  height: 45px;
-  margin-top: 38px;
-  float: left;
+  height: 34px;
+  margin-top: 36px;
 }
 
 select#select-location{
@@ -320,13 +324,14 @@ select#select-location{
   -webkit-appearance: none;
   padding-right: 0.7em;
   background: url(../images/triangle10.png) no-repeat right;
+  /*float: left;*/
 }
 
-#location-navbar{
-  font-size: 3em;
+div#location-navbar{
+  font-size: 2.5em;
   color: @brand-bar-blue;
-  margin-top: 1.15em;
-  margin-left: 0.37em;
+  margin-left: -36px;
+  margin-top: 26px;
 
   .dropdown-menu{
     background-color: @button-blue;
@@ -1134,15 +1139,11 @@ button#go-button{
     width: 7em;
   }
 
-  select#select-location {
+ 
+  div#location-navbar {
     margin-left: 0;
-    margin-top: 0.9em;
-    font-size: 2em;
-  }
-  #location-navbar {
-    margin-left: 0;
-    margin-top: 0.9em;
-    font-size: 2em;
+    margin-top: 1em;
+    font-size: 1.8em;
     color: @brand-bar-blue;
   }
 
