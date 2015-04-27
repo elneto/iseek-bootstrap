@@ -1012,11 +1012,22 @@ button#go-button{
   padding: 0;
   text-align: left;
 }
+
+.partners h5{
+  font-size: 1.1em;
+  display: block;
+  width: 35%;
+  border-bottom: 2px solid white;
+  margin-left: 1em;
+  margin-top: 1em;
+  .font('Semibold');
+}
+
 .partners li{
   list-style-type: none;
-  padding: @padding;
-  margin: @padding;
   text-align: left;
+  margin-left: 1em;
+  margin-bottom: 0.4em;
 }
 .partners li a{
   color:white;
@@ -1068,6 +1079,11 @@ button#go-button{
   border-bottom: 1px solid @brand-bar-blue;
 }
 
+.left-menu .underline {
+  border-bottom: 1px #CCC solid;
+  padding-bottom: 11em;
+}
+
 .footer-menu-container{
   padding: 0;
   margin: 0;
@@ -1108,13 +1124,11 @@ button#go-button{
 .footer-menu-items  li a{
   color:@text-grey;
 }
-.logo-footer{
-  padding: @padding;
-  text-align: left;
-  width:90%;
-  height:90%;
-  margin-top: 5em;
-  margin-bottom: 3em;
+
+#logo-footer{
+  padding-top: 1em;
+  padding-bottom: 2em;
+  width: 200px;
 }
 /*
  * Footer
@@ -1220,7 +1234,7 @@ button#go-button{
   };
   .about-us-xs{
     display: block;
-    background-color: @footer-background-blue;
+    background-color: @brand-bar-blue;
     color:white;
     padding:@padding;
   }
@@ -1373,10 +1387,7 @@ and (orientation : landscape) {
   #twitter-widget-0 { 
       width: 100% !important; 
     };
-  .logo-footer{
-    width: 40%;
-    height: 40%;
-  }
+
   .about-us-xs{
    display: block;
     background-color: @footer-background-blue;
