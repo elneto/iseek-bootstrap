@@ -39,7 +39,6 @@
 @footer-border: #668595;
 @text-grey: #4D4D4D;
 
-
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
@@ -1016,7 +1015,7 @@ button#go-button{
 .partners h5{
   font-size: 1.1em;
   display: block;
-  width: 35%;
+  width: 60%;
   border-bottom: 2px solid white;
   margin-left: 1em;
   margin-top: 1em;
@@ -1088,41 +1087,50 @@ button#go-button{
   padding: 0;
   margin: 0;
 }
+
 .footer-menu-items{
-  //background-color: @footer-highlighted-blue;
-  // .border-radiuses(0,10px,0px,0);
   height: 100%;
   padding-bottom: 100%;
   margin-bottom: -100%;
-  //margin-left: 2em;
   color:@brand-bar-blue;
-}
-.footer-menu-items  h5{
-  background-color: white;
-  padding:@padding;
-  margin-bottom: 0;
-  border-bottom: 2px solid @brand-bar-blue;
-  .font('Semibold');
-  //.border-radiuses(10px,0,0,10px);
-  //color:@footer-dark-blue;
+
+  & h5{
+    background-color: white;
+    padding: .5em .5em 0.2em .5em;
+    margin-bottom: 0;
+    border-bottom: 2px solid @brand-bar-blue;
+    .font('Semibold');
   }
-.footer-menu-items  ul{
-  padding:0;
-  background-color: white;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0.5em;
-  color:@text-grey;
+
+  & ul{
+    padding: 0.4em 0 0 0;
+    background-color: white;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+    color:@text-grey;
+  }
+
+  & li{
+    list-style-type: none;
+    padding-left: 0.5em;
+    margin: 0;
+    text-align: left;
+
+    & a{
+      color:@footer-dark-blue;
+    }
+  }
 }
-.footer-menu-items  li{
-  list-style-type: none;
-  padding-left: 0.5em;
-  margin: 0;
-  text-align: left;
-}
-.footer-menu-items  li a{
-  color:@text-grey;
+
+ul#key-tools {
+  border-bottom: 2px solid @brand-bar-blue;
+  padding: 0.4em 0;
+  & li a{
+    font-size: 1.1em;
+    color: @brand-bar-blue;    
+  }
 }
 
 #logo-footer{
