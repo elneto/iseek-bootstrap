@@ -1239,9 +1239,9 @@ ul#key-tools {
   }
 
   div.main-thumbnail>a {
-  width: 211px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 211px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   div.main-thumbnail div#most-popular-title{
@@ -1266,8 +1266,7 @@ ul#key-tools {
   .about-us{
     display: none;
   }
-   
-
+  
   .search-button, .search-input {
     -webkit-appearance: none;
   }
@@ -1438,11 +1437,14 @@ and (orientation : landscape) {
 @media (min-width: @tablet-min-width) and (max-width:@tablet-max-width) and (orientation: portrait){ 
   .about-us-xs{
     display: block;
-    background-color: @footer-background-blue;
+    background-color: @brand-bar-blue;
     color:white;
-    padding:@padding;
+    padding:2em;
   }
   .about-us{
+    display: none;
+  }
+  div#banner-separation{
     display: none;
   }
   .dutystaion{
@@ -1458,12 +1460,20 @@ and (orientation : landscape) {
   .duty-margin{
     margin:0.2em;
   }
-  .left-menu{
+ 
+  .footer-background{
+    border-left: 1px solid @brand-bar-blue;
+  }
+
+  .left-menu, row.left-menu{
     padding-bottom: 0;
     margin-bottom: 0;
-    border-right: 0;
-    .border-radiuses(0,0,0,0);
   };
+
+  .left-menu > div.left-menu-top {
+    padding-bottom: 0;
+  }
+
   .time{
       border-bottom: 0px;
   };
@@ -1500,15 +1510,20 @@ and (orientation : landscape) {
   div.main-thumbnail div#most-popular-title {
     font-size: 2em;
   }
-  .lpad5 {
-    padding-left: 15px;
-  }
-  .rpad5 {
+  //reset the padding to normal
+  .rpad0, .rpad5, .rpad75{
     padding-right: 15px;
+  }
+  .lpad0, .lpad5, .lpad75{
+    padding-left: 15px;
   }
 
   .search-button, .search-input {
     -webkit-appearance: none;
+  }
+
+  div.spotlight-thumbnail>img{
+    width:100%;
   }
 
   .wborr{
