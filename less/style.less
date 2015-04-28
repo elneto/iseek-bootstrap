@@ -1003,6 +1003,9 @@ button#go-button{
    height: 100%;
    border-right: 1px solid white;
 }
+.left-menu-top{
+  background-color:@brand-bar-blue;
+}
 .toolkit-row{
   overflow: hidden;
 }
@@ -1059,15 +1062,17 @@ button#go-button{
 .about-us-xs{
   display: none;
 }
-.about-us {
+.about-us, .about-us-xs {
+  background-color: @brand-bar-blue;
   color:white;
-  padding:@padding;
+  padding:2em;
   margin: 0;
   width: 100%;
 }
 .about-us a, .about-us-xs a{
   color:white;
   }
+
 .footer-background{
   background-color: white;
   //height: inherit;
@@ -1174,7 +1179,6 @@ ul#key-tools {
   input#login-name, input#login-password {
     width: 7em;
   }
-
  
   div#location-navbar {
     margin-left: 0;
@@ -1215,12 +1219,20 @@ ul#key-tools {
   .footer-background{
     border-left: 1px solid @brand-bar-blue;
   }
-  
-  .left-menu{
+
+  .left-menu, row.left-menu{
     padding-bottom: 0;
     margin-bottom: 0;
   };
 
+  .left-menu > div.left-menu-top {
+    padding-bottom: 0;
+  }
+
+  .left-menu{
+    border-right: 0;
+    .border-radiuses(0,0,0,0);
+  }
 
   div#caption-mi-title {
     font-size: 1.2em;
@@ -1254,10 +1266,7 @@ ul#key-tools {
   .about-us{
     display: none;
   }
-   .left-menu{
-    border-right: 0;
-    .border-radiuses(0,0,0,0);
-  }
+   
 
   .search-button, .search-input {
     -webkit-appearance: none;
@@ -1309,6 +1318,33 @@ and (orientation : landscape) {
     border: none;
     margin-top: 0;
   }
+
+  .footer-background{
+    background-color: white;
+    border-left: 1px solid @brand-bar-blue;
+  }
+
+  .about-us{
+    display: none;
+  }
+
+  .left-menu, .left-menu div.row{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  };
+
+  .left-menu > div.left-menu-top {
+    padding-bottom: 0;
+  }
+
+  .left-menu{
+    background-color: white;
+  }
+
+  div#location-navbar {
+    margin-top: 35px;
+  }
+
 }
 
 /*
@@ -1332,7 +1368,7 @@ and (orientation : landscape) {
     text-align: center;
   }
   .dutystaion-last{
-  text-align: center;
+    text-align: center;
   }
   .weather-icon{
      text-align: center;
@@ -1365,6 +1401,34 @@ and (orientation : landscape) {
 */
 
 @media (min-width: @tablet-min-width) and (max-width:@tablet-max-width) and (orientation: portrait){ 
+  .about-us-xs{
+    display: block;
+    background-color: @footer-background-blue;
+    color:white;
+    padding:@padding;
+  }
+  .about-us{
+    display: none;
+  }
+  .dutystaion{
+    border-right: 0;
+    text-align: center;
+  }
+  .dutystaion-container{
+    text-align: center;
+  };
+  .dutystaion-last{
+  text-align: center;
+  }
+  .duty-margin{
+    margin:0.2em;
+  }
+  .left-menu{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-right: 0;
+    .border-radiuses(0,0,0,0);
+  };
   .time{
       border-bottom: 0px;
   };
@@ -1377,42 +1441,11 @@ and (orientation : landscape) {
   .timezone-pad-l0{
    padding:@padding;
   }
-  .dutystaion{
-    border-right: 0;
-    text-align: center;
-  }
-  .dutystaion-last{
-  text-align: center;
-  }
-  .weather-icon{
-     text-align: center;
-  }
-  .duty-margin{
-    margin:0.2em;
-  }
-  .dutystaion-container{
-    text-align: center;
-  };
-   .left-menu{
-    padding-bottom: 0;
-    margin-bottom: 0;
-  };
   #twitter-widget-0 { 
       width: 100% !important; 
     };
-
-  .about-us-xs{
-   display: block;
-    background-color: @footer-background-blue;
-    color:white;
-    padding:@padding;
-  }
-  .about-us{
-    display: none;
-  }
-  .left-menu{
-    border-right: 0;
-    .border-radiuses(0,0,0,0);
+  .weather-icon{
+     text-align: center;
   }
 
   img#image-main-story {
