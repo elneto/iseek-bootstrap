@@ -1305,6 +1305,10 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (orientation : landscape) { 
 
+  .about-us{
+    display: none;
+  }
+
   .search-button, .search-input {
     -webkit-appearance: none;
   }
@@ -1324,8 +1328,25 @@ and (orientation : landscape) {
     border-left: 1px solid @brand-bar-blue;
   }
 
-  .about-us{
-    display: none;
+  div#location-navbar {
+    margin-top: 35px;
+  }
+
+  div.main-thumbnail>img, div#thumbnail-most-popular>img {
+    width: 33%;
+    float: left;
+    margin: 1.5em 0 0 1.5em;
+  }
+
+  div.main-thumbnail>a {
+    width: 250px;
+    float: left;
+    font-size: 1.2em;
+    padding: 1.5em;
+  }
+  div.main-thumbnail div#most-popular-title {
+    font-size: 1.5em;
+    margin-left: 1em;
   }
 
   .left-menu, .left-menu div.row{
@@ -1340,11 +1361,18 @@ and (orientation : landscape) {
   .left-menu{
     background-color: white;
   }
-
-  div#location-navbar {
-    margin-top: 35px;
+  
+  //reset the padding to normal
+  .rpad0, .rpad5, .rpad75{
+    padding-right: 15px;
+  }
+  .lpad0, .lpad5, .lpad75{
+    padding-left: 15px;
   }
 
+  div.spotlight-thumbnail>img{
+    width:100%;
+  }
 }
 
 /*
@@ -1389,6 +1417,13 @@ and (orientation : landscape) {
 
   div#calendar-box, div#announcements-box {
     max-height: 172px;
+  }
+
+  .lpad5 {
+    padding-left: 15px;
+  }
+  .rpad5 {
+    padding-right: 15px;
   }
 
   .search-button, .search-input {
