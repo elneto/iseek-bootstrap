@@ -5,7 +5,7 @@
 // Colors
 @brand-bar-blue: #267bb2;
 @brand-font-color: white;
-@labels-blue: #1a74ba;
+@labels-blue: #2771b7;
 /////////
 @button-blue: #5aabd7;
 @side-box-blue: #5aabd7; // (sideboxes, buttons, time and weather)
@@ -96,7 +96,7 @@
 * Rules
 */
 
-.border-radius (@radius: 10px;) {
+.border-radius (@radius: 15px;) {
   -webkit-border-radius: @radius;
   -moz-border-radius:    @radius;
   border-radius:         @radius;
@@ -397,6 +397,18 @@ div#main-navbar-collapse-1 ul.dropdown-menu li a{
   font-size: 1em;
 }
 
+
+/*
+* Urgent message
+*/
+
+div.urgent-message{
+  text-align: center;
+  font-size: 1.5em;
+  .border-radius;
+  padding: 0.2em 0 0.2em 0;
+}
+
 /*
 * Search
 */
@@ -541,6 +553,7 @@ span.calendar-date{
   color: @labels-blue;
   padding-right: 1.5em;
   text-transform: uppercase;
+  .font('Semibold');
 }
 
 ul#calendar-list, ul#announcements-list {
@@ -612,7 +625,7 @@ div#low-statement {
 h3#spotlight-box{
    .border-radiuses(15px,0,0,15px);
    background-color: @spotlight-grey;
-   color: @menu-blue;
+   color: @labels-blue;
    padding:@padding;
    margin-bottom: 0;
    font-size: @large-text;
@@ -657,7 +670,7 @@ span.less-large{
 }
 
 .submit-content{
-  background-color: @add-content-blue;
+  background-color: @brand-bar-blue;
   .border-radius(10px);
   color: white;
   padding:@padding;
@@ -784,6 +797,7 @@ h3.nohoverfx:hover{
 }
 .tjo a{
   color:@text-grey;
+  .font('Semibold');
 }
 .tjo-content{
   background-color:#FFF;
@@ -795,6 +809,7 @@ h3.nohoverfx:hover{
 .tjo-content ul{
   padding:@padding;
   margin:0;
+  padding-top: 0;
 }
 .tjo-content ul li {
   list-style-type: none;
@@ -815,6 +830,7 @@ h3.nohoverfx:hover{
 }
 .classifieds a{
   color:@text-grey;
+  .font('Semibold');
 }
 .classifieds-content{
   background-color:#FFF;
@@ -826,6 +842,7 @@ h3.nohoverfx:hover{
 .classifieds-content ul{
   padding:@padding;
   margin: 0;
+  padding-top: 0;
 }
 .classifieds-content ul li {
   list-style-type: none;
@@ -845,6 +862,7 @@ h3.nohoverfx:hover{
 }
 .staffunion a{
   color: @text-grey;
+  .font('Semibold');
 }
 
 .staffunion-content{
@@ -855,8 +873,9 @@ h3.nohoverfx:hover{
   height: @fixed-hieght;
 }
 .staffunion-content ul{
-  padding: 0;
+  padding: @padding;
   margin:0;
+  padding-top: 0;
 }
 .staffunion-content ul li {
   list-style-type: none;
@@ -876,6 +895,7 @@ h3.nohoverfx:hover{
 }
 .community a{
   color: @text-grey;
+  .font('Semibold');
 }
 .community-content{
   background-color:#FFF;
@@ -889,7 +909,7 @@ h3.nohoverfx:hover{
 }
 .community-content ul li {
   list-style-type: none;
-  padding:@padding;
+  padding:0.5em 0 0 0.5em;
   margin:0;
   
 }
@@ -1241,12 +1261,12 @@ ul#key-tools {
   }
 
   div#caption-mi-title {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   div#caption-mi-date {
     .font('Light');
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   div.main-thumbnail>a {
@@ -1262,6 +1282,10 @@ ul#key-tools {
 
   h3.top-boxes-margin {
     margin-top: 0.5em;
+  }
+
+  ul#key-tools li a{
+    font-size: 0.9em;
   }
 
   .social a {
@@ -1336,6 +1360,10 @@ and (orientation : landscape) {
   .footer-background{
     background-color: white;
     border-left: 1px solid @brand-bar-blue;
+  }
+
+   ul#key-tools li a{
+    font-size: 0.9em;
   }
 
   div#location-navbar {
